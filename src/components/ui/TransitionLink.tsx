@@ -34,11 +34,7 @@ const TransitionLink = ({
   return (
     <div
       className={cx(
-        opacity
-          ? pathname === href
-            ? "opacity-100"
-            : "opacity-50"
-          : "opacity-100",
+        opacity ? (pathname === href ? "underline" : "") : "underline",
         "cursor-pointer",
         className
       )}

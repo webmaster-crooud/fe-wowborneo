@@ -166,7 +166,8 @@ const config: Config = {
         ], // 256px
       },
       fontFamily: {
-        body: ["var(--font-roboto)"],
+        body: ["var(--font-openSans)"],
+        prata: ["var(--font-prata)"],
       },
       padding: {
         12: "calc((12/1920)*100*1vw)",

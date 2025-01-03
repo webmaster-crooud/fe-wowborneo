@@ -12,6 +12,7 @@ import ArrowDown from "./ArrowDown";
 import { useLenis } from "@studio-freight/react-lenis";
 import { useQuery } from "@tanstack/react-query";
 import { fetchData } from "@/lib/fetchData";
+import GradientImage from "./GradientImage";
 
 interface ServiceCategoryName {
   id: string;
@@ -91,74 +92,36 @@ export default function Navbar() {
     <div ref={container} className="h-1 fixed top-0 z-40 w-full">
       <Container
         className={cx(
-          "relative z-20 flex flex-row justify-between items-center landscape:min-lg:py-24-d w-full text-white bg-white/5 backdrop-blur-sm",
+          "relative z-20 flex flex-row justify-between items-center landscape:min-lg:py-48-d w-full text-white bg-white/5 backdrop-blur-sm",
           "py-16-m"
         )}
       >
         <div
           className={cx(
-            "landscape:min-lg:flex flex-row gap-80 text-18-d",
+            "landscape:min-lg:flex flex-row gap-32 text-18-d",
             "hidden"
           )}
         >
-          <TransitionLink href={"/"} className={cx("navbar-link")}>
-            Reservation
+          <TransitionLink href={"/river-cruise"} className={cx("navbar-link")}>
+            River Cruise
           </TransitionLink>
-          <div
-            className={cx(
-              "flex flex-row items-center gap-8 cursor-pointer relative"
-            )}
-          >
-            <div
-              className={cx(
-                menuItems.some((item) => pathname === item.href)
-                  ? "opacity-100"
-                  : "opacity-50",
-                "navbar-link"
-              )}
-              onClick={clickToggle}
-            >
-              Our Services
-            </div>
-            <div
-              className={cx(
-                menuItems.some((item) => pathname === item.href)
-                  ? "opacity-100"
-                  : "opacity-50",
-                "w-[0.833vw] h-[0.521vw] relative"
-              )}
-              onClick={clickToggle}
-            >
-              <ArrowDown />
-            </div>
-            <div
-              className={cx(
-                "p-20 bg-white w-max absolute top-[150%] rounded-lg text-secondary hidden opacity-0 shadow-md border border-secondary/5",
-                "details-our-services"
-              )}
-            >
-              {data?.data?.items?.map((item, key) => (
-                <TransitionLink
-                  key={key}
-                  href={`/our-services/${item.id}`}
-                  className={cx(
-                    pathname === `/our-services/${item.id}`
-                      ? "font-bold"
-                      : "font-normal"
-                  )}
-                  opacity={false}
-                >
-                  {item.name}
-                </TransitionLink>
-              ))}
-            </div>
+          <TransitionLink href={"/boats"} className={cx("navbar-link")}>
+            Boats
+          </TransitionLink>
+          <TransitionLink href={"/explore"} className={cx("navbar-link")}>
+            Explore
+          </TransitionLink>
+          <TransitionLink href={"/explore"} className={cx("navbar-link")}>
+            Resources
+          </TransitionLink>
+          <TransitionLink href={"/explore"} className={cx("navbar-link")}>
+            Testimonials
+          </TransitionLink>
+        </div>
+        <div className="absolute left-1/2 -translate-x-1/2">
+          <div className={cx("w-[9.375vw] h-[4.688vw]")}>
+            <GradientImage src="/images/logo.png" />
           </div>
-          <TransitionLink href={"/news"} className={cx("navbar-link")}>
-            News
-          </TransitionLink>
-          <TransitionLink href={"/contact"} className={cx("navbar-link")}>
-            Contact
-          </TransitionLink>
         </div>
         <div
           className={cx(
@@ -170,7 +133,9 @@ export default function Navbar() {
           Menu
         </div>
         <TransitionLink href="/reservation" opacity={false}>
-          <Button>Book Now</Button>
+          <Button className="text-18-d bg-white/30 backdrop-blur-md hover:bg-white/50">
+            Book your cruise
+          </Button>
         </TransitionLink>
       </Container>
 
