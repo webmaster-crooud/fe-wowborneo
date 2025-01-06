@@ -8,7 +8,7 @@ export default function Privacy() {
     <div
       className={cx(
         "landscape:min-lg:-translate-y-[10%] landscape:min-lg:mb-0",
-        "translate-y-0 mb-[23.256vw]"
+        "translate-y-0 mb-[23.256vw] bg-blue-200"
       )}
     >
       <div

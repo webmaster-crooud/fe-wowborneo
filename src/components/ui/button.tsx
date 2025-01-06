@@ -1,6 +1,5 @@
 import React, { ButtonHTMLAttributes, ReactNode } from "react";
-import clsx from "clsx";
-import { cn } from "@/lib/utils";
+import { cx } from "class-variance-authority";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
@@ -21,9 +20,9 @@ export default function Button({
 
   return (
     <button
-      className={cn(
+      className={cx(
         "landscape:min-lg:px-40-d landscape:min-lg:py-12 rounded-full focus:outline-none focus:ring-0 landscape:min-lg:text-18-d",
-        "text-12-m px-16-m py-[0.93vw]",
+        "text-12-m px-16-m py-[0.93vw] text-white",
         variantStyles[variant],
         className
       )}

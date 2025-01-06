@@ -7,6 +7,8 @@ import { toggleNavbar } from "@/stores/navbar";
 import useVariantsOnScroll from "@/hooks/useVariantsOnScroll";
 import Navbar from "../ui/Navbar";
 import Footer from "../ui/Footer";
+import Introduction from "./Introduction";
+import Divider from "../ui/Divider";
 
 export default function Home() {
   const state = toggleNavbar();
@@ -26,7 +28,9 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      <Privacy />
+      <Introduction />
+      <Divider />
+      {/* <Privacy /> */}
       <Footer />
     </>
   );
