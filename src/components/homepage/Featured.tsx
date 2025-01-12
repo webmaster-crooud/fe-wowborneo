@@ -18,9 +18,13 @@ export default function Introduction() {
           <GradientImage src="/images/hero.jpg" />
         </div>
         <div className="flex flex-col gap-[32px] justify-center items-stretch w-[456px]">
-          <span className="introduction-text">INTRODUCTION</span>
-          <h2 className="title">Wowborneo Overview</h2>
-          <p className="description">
+          <span className="text-sm font-bold tracking-wider text-center">
+            INTRODUCTION
+          </span>
+          <h2 className="font-prata font-normal leading-[3rem] text-5xl text-center">
+            Wowborneo Overview
+          </h2>
+          <p className="text-[17px] text-[#372817] text-center leading-[28px]">
             Wow Borneo invites you to embark on an unparalleled journey through
             Kalimantan’s pristine rivers and vibrant rainforests. As the only
             river cruise provider in Borneo, we offer exclusive access to

@@ -9,6 +9,7 @@ import Navbar from "../ui/Navbar";
 import Footer from "../ui/Footer";
 import Introduction from "./Introduction";
 import Divider from "../ui/Divider";
+import Featured from "./Featured";
 
 export default function Home() {
   const state = toggleNavbar();
@@ -30,7 +31,7 @@ export default function Home() {
       <Hero />
       <Introduction />
       <Divider />
-      {/* <Privacy /> */}
+      <Featured />
       <Footer />
     </>
   );
