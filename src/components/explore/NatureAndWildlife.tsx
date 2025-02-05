@@ -1,6 +1,8 @@
 import { cx } from "class-variance-authority";
 import GradientImage from "../ui/GradientImage";
 import Button from "../ui/button";
+import Image from "next/image";
+import Container from "../ui/Container";
 
 export default function NatureAndWildlife() {
   return (
@@ -11,24 +13,21 @@ export default function NatureAndWildlife() {
           "text-center flex flex-col justify-center items-center gap-6 relative mb-12 px-4 sm:px-12 lg:px-40"
         )}
       >
-        <span className="text-sm font-bold tracking-widest w-full uppercase">
-          Nature & Wildlife
-        </span>
-        <h1 className={cx("text-3xl font-prata w-full lg:text-4xl")}>Nature & Wildlife</h1>
+        <h1 className={cx("text-subtitle font-prata w-full")}>Nature & Wildlife</h1>
         <div className="rounded-full w-full h-full border border-[#CD5A05] contents sm:flex sm:p-4 sm:max-w-fit">
           <div className="flex flex-col gap-4 w-full sm:flex-row sm:justify-between sm:max-w-fit">
-            <Button className="text-xs transition rounded-full py-3">
+            <Button rounded="rounded-full" className="text-xs transition py-3">
               Sebangau National Park
             </Button>
-            <Button className="text-xs transition rounded-full py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
+            <Button rounded="rounded-full" className="text-xs transition py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
               Orangutan Conservation
             </Button>
-            <Button className="text-xs transition rounded-full py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
+            <Button rounded="rounded-full" className="text-xs transition py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
               River Ecosystems
             </Button>
           </div>
         </div>
-        <p className={cx("w-full leading-6")}>
+        <p className={cx("text-description w-full leading-6")}>
           In Central Kalimantan, nature thrives in breathtaking abundance. As
           home to Sebangau National Park, this region holds one of the largest
           populations of wild orangutans, as well as countless other species
@@ -39,24 +38,41 @@ export default function NatureAndWildlife() {
           understanding Borneo’s wild heart.
         </p>
       </div>
-      <div className={cx("w-full h-[490px] relative mb-28")}>
+      <Container className={cx("w-full relative space-y-10 px-4 py-20 sm:px-8 md:px-0 md:space-y-0 md:flex md:flex-col md:items-center md:justify-center")}>
         <div
           className={cx(
-            "absolute z-20 flex flex-col gap-32-d text-white top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-center"
+            "w-full h-full flex flex-col gap-4 justify-center items-center text-center md:gap-12 md:absolute md:justify-center md:z-20 md:text-white md:px-32 md:h-fit"
           )}
         >
-          <p className={cx("font-prata text-5xl lg:text-6xl")}>
+          <div className="hidden space-y-3 md:block lg:space-y-6">
+            <p>1/3</p>
+            <div className="flex items-center gap-6">
+              <p>SWIPE</p>
+              <div className="w-96 bg-white h-1 rounded-full">
+                <div className="w-[60%] h-full bg-orange-borneo rounded-full"></div>
+              </div>
+              <p>{">>"}</p>
+            </div>
+          </div>
+          <p className={cx("font-prata text-subtitle w-full lg:w-[60%]")}>
             Sabangau National Park
           </p>
-          <Button className="text-18-d hover:shadow-lg hover:scale-105 transition w-fit mx-auto">
+          <Button className="text-xs transition rounded-full py-3 w-fit">
             About Sebangau
           </Button>
         </div>
+
         <div
-          className={cx("absolute top-0 z-10 w-full h-full bg-[#37281780]")}
-        ></div>
-        <GradientImage src="/images/explore/nature/sebangau.jpeg" />
-      </div>
+          className={cx(
+            "w-full h-44 rounded-xl relative overflow-hidden sm:h-80 md:rounded-none md:h-96 lg:h-full"
+          )}
+        >
+          <div
+            className={cx("hidden w-full h-full bg-[#37281780]/50 absolute z-10 md:block")}
+          ></div>
+          <Image src="/images/nature/swamp.png" alt="picture of orang utan" className="w-full rounded-lg md:rounded-none" height={1000} width={1000} />
+        </div>
+      </Container>
       {/* Section 2 */}
       <div
         className={cx(
@@ -66,23 +82,23 @@ export default function NatureAndWildlife() {
         <span className="text-sm font-bold tracking-widest w-full uppercase">
           Cultural Heritage
         </span>
-        <h1 className={cx("text-3xl font-prata w-full lg:text-4xl")}>
+        <h1 className={cx("text-subtitle font-prata w-full")}>
           Cultural Heritage
         </h1>
         <div className="rounded-full w-full h-full border border-[#CD5A05] contents sm:flex sm:p-4 sm:max-w-fit">
           <div className="flex flex-col gap-4 w-full sm:flex-row sm:justify-between sm:max-w-fit">
-            <Button className="text-xs transition rounded-full py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
+            <Button rounded="rounded-full" className="text-xs transition py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
               Dayak People
             </Button>
-            <Button className="text-xs transition rounded-full py-3">
+            <Button rounded="rounded-full" className="text-xs transition py-3">
               Dayak Culture
             </Button>
-            <Button className="text-xs transition rounded-full py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
+            <Button rounded="rounded-full" className="text-xs transition py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
               Traditional Longhouses
             </Button>
           </div>
         </div>
-        <p className={cx("w-full leading-6")}>
+        <p className={cx("text-description w-full leading-6")}>
           The Dayak people of Central Kalimantan are the keepers of a profound
           and vibrant culture, rooted in the land and its traditions. Wow Borneo
           offers travelers a rare glimpse into this world through respectful,
@@ -93,19 +109,41 @@ export default function NatureAndWildlife() {
           the rivers of Borneo.
         </p>
       </div>
-      <div className={cx("w-full h-[490px] relative mb-28")}>
+      <Container className={cx("w-full relative space-y-10 px-4 py-20 sm:px-8 md:px-0 md:space-y-0 md:flex md:flex-col md:items-center md:justify-center")}>
         <div
           className={cx(
-            "absolute z-20 flex flex-col gap-32-d text-white top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-center"
+            "w-full h-full flex flex-col gap-4 justify-center items-center text-center md:gap-12 md:absolute md:justify-center md:z-20 md:text-white md:px-32 md:h-fit"
           )}
         >
-          <p className={cx("font-prata text-80-d")}>Dayak Peoples</p>
+          <div className="hidden space-y-3 md:block lg:space-y-6">
+            <p>1/3</p>
+            <div className="flex items-center gap-6">
+              <p>SWIPE</p>
+              <div className="w-96 bg-white h-1 rounded-full">
+                <div className="w-[60%] h-full bg-orange-borneo rounded-full"></div>
+              </div>
+              <p>{">>"}</p>
+            </div>
+          </div>
+          <p className={cx("font-prata text-subtitle w-full lg:w-[60%]")}>
+            Dayak Culture
+          </p>
+          <Button className="text-xs transition rounded-full py-3 w-fit">
+            About Dayak Culture
+          </Button>
         </div>
+
         <div
-          className={cx("absolute top-0 z-10 w-full h-full bg-[#37281780]")}
-        ></div>
-        <GradientImage src="/images/explore/dayak-tribes.jpeg" />
-      </div>
+          className={cx(
+            "w-full h-44 rounded-xl relative overflow-hidden sm:h-80 md:rounded-none md:h-96 lg:h-full"
+          )}
+        >
+          <div
+            className={cx("hidden w-full h-full bg-[#37281780]/50 absolute z-10 md:block")}
+          ></div>
+          <Image src="/images/people/woman5.png" alt="picture of orang utan" className="w-full rounded-lg md:rounded-none" height={1000} width={1000} />
+        </div>
+      </Container>
       {/* Section 3 */}
       <div
         className={cx(
@@ -115,21 +153,21 @@ export default function NatureAndWildlife() {
         <span className="text-xs font-bold tracking-widest w-full uppercase sm:text-sm">
           Unique Destinations
         </span>
-        <h1 className={cx("text-2xl font-prata w-full sm:text-3xl lg:text-4xl")}>Unique Destinations</h1>
+        <h1 className={cx("text-subtitle font-prata w-full")}>Unique Destinations</h1>
         <div className="rounded-full w-full h-full border border-[#CD5A05] contents sm:flex sm:p-4 sm:max-w-fit">
           <div className="flex flex-col gap-4 w-full sm:flex-row sm:justify-between sm:max-w-fit">
-            <Button className="text-xs transition rounded-full py-3">
+            <Button rounded="rounded-full" className="text-xs transition py-3">
               Palangkaraya
             </Button>
-            <Button className="text-xs transition rounded-full py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
+            <Button rounded="rounded-full" className="text-xs transition py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
               Katingan Regency
             </Button>
-            <Button className="text-xs transition rounded-full py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
+            <Button rounded="rounded-full" className="text-xs transition py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
               Pangkalan Bun
             </Button>
           </div>
         </div>
-        <p className={cx("w-full leading-6")}>
+        <p className={cx("text-description w-full leading-6")}>
           From the lively markets of Palangka Raya to the tranquil shores of
           Katingan and the historic charm of Pangkalan Bun, Central Kalimantan’s
           towns and villages each offer a unique piece of the region’s story.
@@ -140,22 +178,41 @@ export default function NatureAndWildlife() {
           of adventure.
         </p>
       </div>
-      <div className={cx("w-full h-[490px] relative")}>
+      <Container className={cx("w-full relative space-y-10 px-4 py-20 sm:px-8 md:px-0 md:space-y-0 md:flex md:flex-col md:items-center md:justify-center")}>
         <div
           className={cx(
-            "absolute z-20 flex flex-col gap-32-d text-white top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-center"
+            "w-full h-full flex flex-col gap-4 justify-center items-center text-center md:gap-12 md:absolute md:justify-center md:z-20 md:text-white md:px-32 md:h-fit"
           )}
         >
-          <p className={cx("font-prata text-80-d")}>Palangka Raya</p>
-          <Button className="text-18-d hover:shadow-lg hover:scale-105 transition w-fit mx-auto">
+          <div className="hidden space-y-3 md:block lg:space-y-6">
+            <p>1/3</p>
+            <div className="flex items-center gap-6">
+              <p>SWIPE</p>
+              <div className="w-96 bg-white h-1 rounded-full">
+                <div className="w-[60%] h-full bg-orange-borneo rounded-full"></div>
+              </div>
+              <p>{">>"}</p>
+            </div>
+          </div>
+          <p className={cx("font-prata text-subtitle w-full lg:w-[60%]")}>
+            Palangka Raya
+          </p>
+          <Button className="text-xs transition rounded-full py-3 w-fit">
             About Palangka Raya
           </Button>
         </div>
+
         <div
-          className={cx("absolute top-0 z-10 w-full h-full bg-[#37281780]")}
-        ></div>
-        <GradientImage src="/images/explore/kahayan-river.jpeg" />
-      </div>
+          className={cx(
+            "w-full h-44 rounded-xl relative overflow-hidden sm:h-80 md:rounded-none md:h-96 lg:h-full"
+          )}
+        >
+          <div
+            className={cx("hidden w-full h-full bg-[#37281780]/50 absolute z-10 md:block")}
+          ></div>
+          <Image src="/images/people/family6.png" alt="picture of orang utan" className="w-full rounded-lg md:rounded-none" height={1000} width={1000} />
+        </div>
+      </Container>
       {/* Section 4 */}
     </div>
   );

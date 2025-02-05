@@ -14,14 +14,14 @@ export default function Hero() {
     >
       <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
 
-      <div className="absolute z-20 text-white flex flex-col gap-4 items-center justify-center h-full w-full px-4 sm:px-12 md:px-16">
+      <div className="absolute z-20 text-white flex flex-col gap-4 items-center justify-center h-full w-full px-4 sm:px-12 md:px-16 md:gap-3">
         <p className={cx("text-sm text-center font-semibold md:text-base")}>
           BOATS - RAHAI’I PANGUN
         </p>
-        <p className={cx("text-3xl leading-tight font-prata text-center xl:text-7xl xl:w-[60%]")}>
+        <p className={cx("text-title lg:text-3xl xl:text-7xl leading-tight font-prata text-center xl:w-[60%]")}>
           Tradition Meets Modern Comfort on the Jungle River
         </p>
-        <p className={cx("text-xs leading-tight text-center sm:text-base lg:w-[80%]")}>
+        <p className={cx("text-xs leading-tight text-center sm:text-description lg:w-[80%]")}>
           Step aboard Rahai’i Pangun, Wow Borneo’s flagship cruiser, where the
           charm of Kalimantan’s riverboats meets the comforts of modern
           amenities. This beautifully crafted vessel invites you to glide along
@@ -36,7 +36,7 @@ export default function Hero() {
         </Button>
       </div>
 
-      <GradientImage src="/images/boats/detail/hero.jpeg" />
+      <GradientImage src="/images/nature/river2.png" />
     </div>
   );
 }

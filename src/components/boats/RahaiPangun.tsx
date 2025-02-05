@@ -6,17 +6,17 @@ import Button from "../ui/button";
 
 const list = [
   {
-    icon: "/images/boats/rahaipangun/Spacious.svg",
-    title: "Eco-Friendly Design",
+    icon: "/images/icons/boats/eco-friendly.png",
+    title: "Spacious Viewing Deck",
     desc: "Relax and take in the surrounding views from our open upper deck.",
   },
   {
-    icon: "/images/boats/rahaipangun/AirConditioner.svg",
-    title: "Air-Conditioned Comfort",
+    icon: "/images/icons/boats/air-con.png",
+    title: "Air-Con Comfort",
     desc: "Each cabin is equipped with air conditioning and private ensuite.",
   },
   {
-    icon: "/images/boats/rahaipangun/Renowned.svg",
+    icon: "/images/icons/boats/meals.png",
     title: "Renowned Cuisine",
     desc: "Savor freshly prepared meals while cruising along the river.",
   },
@@ -29,14 +29,14 @@ export default function RangaiPangun() {
         <div className={cx("w-full aspect-[9/12] order-first xl:aspect-square")}>
           <GradientImage
             className="rounded-[16px]"
-            src="/images/homepage/introduction/Boat Deck.png"
+            src="/images/boats/exterior/boat.png"
           />
         </div>
         <div>
-          <p className={cx("text-40-d leading-tight font-prata ")}>
+          <p className={cx("text-subtitle leading-tight font-prata ")}>
             {"Rahai’i Pangun"}
           </p>
-          <p className={cx("text-20-d leading-tight mt-6")}>
+          <p className={cx("text-description leading-tight mt-6")}>
             Step aboard Kumai, the latest addition to our fleet, designed for
             luxury with a commitment to eco-conscious travel. Solar-powered air
             conditioning keeps the cabins comfortable while minimizing

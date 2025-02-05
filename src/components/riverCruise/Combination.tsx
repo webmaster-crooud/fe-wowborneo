@@ -1,70 +1,88 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
 import Container from "../ui/Container";
 import { cx } from "class-variance-authority";
 import CombinationCard from "./CombinationCard";
+import CardWhyChoose from "../homepage/CardWhyChoose";
 
 export default function Combination() {
+  const [expandedIndex, setExpandedIndex] = useState<null | number>(null)
+
   const data = [
     {
       type: "8D7N",
       head: "Tanjung Puting & Palangkaraya Expedition",
       desc: "A comprehensive exploration that spans both the renowned Tanjung Puting National Park and the vibrant cultural center of Palangkaraya.",
-      img: "/images/riverCruise/discover/image-1.png",
+      img: "/images/boats/exterior/boat.png",
     },
     {
       type: "8D7N",
-      head: "Tanjung Puting & Palangkaraya Expedition",
+      head: "Jungle Cruise & Dayak Longhouse",
       desc: "A comprehensive exploration that spans both the renowned Tanjung Puting National Park and the vibrant cultural center of Palangkaraya.",
-      img: "/images/riverCruise/discover/image-2.png",
+      img: "/images/dayak-longhouse.png",
     },
     {
       type: "8D7N",
-      head: "Tanjung Puting & Palangkaraya Expedition",
+      head: "Orangutan & Nature Odyssey",
       desc: "A comprehensive exploration that spans both the renowned Tanjung Puting National Park and the vibrant cultural center of Palangkaraya.",
-      img: "/images/riverCruise/discover/image-3.png",
+      img: "/images/wildlife/orangutan2.png",
     },
     {
       type: "8D7N",
-      head: "Tanjung Puting & Palangkaraya Expedition",
+      head: "Dayak Heritage & Cultural Journey",
       desc: "A comprehensive exploration that spans both the renowned Tanjung Puting National Park and the vibrant cultural center of Palangkaraya.",
-      img: "/images/riverCruise/discover/image-4.png",
+      img: "/images/people/woman5.png",
     },
     {
       type: "8D7N",
-      head: "Tanjung Puting & Palangkaraya Expedition",
+      head: "The Koran River Adventure",
       desc: "A comprehensive exploration that spans both the renowned Tanjung Puting National Park and the vibrant cultural center of Palangkaraya.",
-      img: "/images/riverCruise/discover/image-5.png",
+      img: "/images/boats/exterior/boat2.png",
     },
     {
       type: "8D7N",
-      head: "Tanjung Puting & Palangkaraya Expedition",
+      head: "Seatrek Bali & Wow Borneo",
       desc: "A comprehensive exploration that spans both the renowned Tanjung Puting National Park and the vibrant cultural center of Palangkaraya.",
-      img: "/images/riverCruise/discover/image-6.png",
+      img: "/images/people/man2.png",
     },
   ];
   return (
     <Container>
-      <div
-        className={cx(
-          "text-left flex flex-col gap-32-d justify-center items-center lg:text-center"
-        )}
-      >
-        <p className={cx("uppercase font-semibold w-full")}>Combination Tours</p>
-        <p className={cx("font-prata text-3xl w-full lg:text-4xl")}>
-          Discover Our Combination Tours
-        </p>
-        <p className="lg:w-[60%] lg:text-base">
-          For the intrepid traveler seeking a deeper exploration, our
-          Combination Tours offer extended journeys in partnership with other
-          leading tour providers in Indonesia. These curated adventures blend
-          the best of Borneo with other iconic destinations, creating
-          unforgettable multi-day experiences.
+      <div className="space-y-4 lg:flex lg:items-end lg:gap-6">
+        <div className="space-y-4 w-full">
+          <p className={cx("uppercase font-semibold w-full")}>Combination Tours</p>
+          <p className={cx("font-prata text-subtitle")}>
+            Katingan River and Sebangau National Park Cruises
+          </p>
+        </div>
+        <p className="text-description">
+          Set sail on the tranquil waters of Katingan River, where the Sebangau National Park unveils a world of rich biodiversity. Encounter rare species, explore peat-swamp forests, and connect with the heart of Kalimantan.
         </p>
       </div>
-      <div className={cx("grid grid-cols-1 gap-12 mt-80-d sm:grid-cols-2 xl:grid-cols-3")}>
-        {data.map((item, key) => (
-          <CombinationCard item={item} key={key} />
-        ))}
+      <div className={cx("pt-20 grid gap-4 transition-all duration-500 grid-cols-1 lg:grid-cols-12")}>
+        {data.map((item, index) => {
+          const currentRow = Math.floor(index / 3);
+          const expandedRow = expandedIndex !== null ? Math.floor(expandedIndex / 3) : null;
+
+          let colSpan = "";
+          if (expandedIndex === null || expandedRow !== currentRow) {
+            colSpan = "lg:col-span-4";
+          } else {
+            colSpan = expandedIndex === index ? "lg:col-span-6" : "lg:col-span-3";
+          }
+          
+          return (
+            <CombinationCard
+              colSpan={colSpan}
+              key={index}
+              item={item}
+              isOpen={expandedIndex === index}
+              onClick={() => setExpandedIndex((prev) => (prev === index ? null : index))}
+              height="h-full"
+            />
+          );
+        })}
       </div>
     </Container>
   );

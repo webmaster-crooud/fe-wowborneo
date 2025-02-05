@@ -27,16 +27,16 @@ export default function Introduction() {
               "w-52 h-72 relative rounded-xl overflow-hidden xl:w-96 xl:h-[496px]"
             )}
           >
-            <GradientImage src="/images/homepage/introduction/left-intro.png" />
+            <GradientImage src="/images/people/kid.png" />
           </div>
           <div className="flex flex-col gap-4 justify-center items-center text-center sm:w-2/3 sm:text-left sm:items-start xl:text-center xl:items-center xl:h-full xl:gap-10">
             <span className="text-sm font-bold tracking-wider w-full">
               INTRODUCTION
             </span>
-            <h2 className="font-prata w-full font-normal leading-[3rem] text-5xl">
+            <h2 className="font-prata w-full font-normal leading-[3rem] text-subtitle">
               Wowborneo Overview
             </h2>
-            <p className="text-xs sm:text-sm text-[#372817] md:text-base xl:w-[70%]">
+            <p className="text-description text-[#372817] xl:w-[70%]">
               Wow Borneo invites you to embark on an unparalleled journey through
               Kalimantan's pristine rivers and vibrant rainforests. As the only
               river cruise provider in Borneo, we offer exclusive access to
@@ -55,14 +55,14 @@ export default function Introduction() {
               "w-full h-36 sm:h-52 md:h-60 rounded-xl overflow-hidden xl:w-80"
             )}
           >
-            <GradientImage src="/images/homepage/introduction/Boat Deck.png" />
+            <GradientImage src="/images/boats/exterior/boat.png" />
           </div>
           <div
             className={cx(
               "w-full h-36 sm:h-52 md:h-60 rounded-xl overflow-hidden xl:w-80"
             )}
           >
-            <GradientImage src="/images/homepage/introduction/River Boat.png" />
+            <GradientImage src="/images/people/woman.png" />
           </div>
         </div>
       </Container>

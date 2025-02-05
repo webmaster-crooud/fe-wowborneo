@@ -8,18 +8,18 @@ const BookYourAdventure = () => {
         {
             name: "Orangutan Tour and Dayak Village",
             price: "2,000",
-            img: "/images/boats/pricing/pricing-1.png"
+            img: "/images/people/family5.png"
         },
         {
             name: "Trip name goes here",
             price: "3,000",
-            img: "/images/boats/pricing/pricing-2.png"
+            img: "/images/wildlife/orangutan6.png"
 
         },
         {
             name: "Long House and Dayak Village Trip",
             price: "1,250",
-            img: "/images/boats/pricing/pricing-3.png"
+            img: "/images/people/woman4.png"
 
         },
     ]
@@ -30,11 +30,11 @@ const BookYourAdventure = () => {
                 <div className={cx("flex gap-6 flex-col md:text-center lg:flex-row lg:text-left lg:items-end")}>
                     <div className={cx("w-full space-y-8")}>
                         <p>JOURNEY WITH US</p>
-                        <p className={cx("font-prata text-48-d")}>
+                        <p className={cx("font-prata text-subtitle")}>
                             Book Your Adventure
                         </p>
                     </div>
-                    <p className="xl:text-base">
+                    <p className="text-description">
                         Ready to experience the magic of Borneo? Book your journey today and step into an unforgettable adventure along Kalimantan’s rivers.
                     </p>
                 </div>

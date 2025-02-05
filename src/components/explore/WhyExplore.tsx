@@ -10,10 +10,10 @@ export default function WhyExplore() {
       <Container className="py-2">
         <div className="grid grid-cols-1 justify-between gap-10 sm:grid-cols-2">
           <div className="flex flex-col gap-4">
-            <h1 className="text-3xl leading-normal font-prata lg:text-4xl">
+            <h1 className="text-subtitle leading-normal font-prata">
               Why Explore with <span className="block">Wow Borneo?</span> 
             </h1>
-            <p className="text-[17px] leading-7">
+            <p className="text-description leading-7">
               At Wow Borneo, we believe that travel should be a journey of
               discovery and respect. Our deep knowledge of Central Kalimantan’s
               landscapes and our strong partnerships with local communities
@@ -27,10 +27,10 @@ export default function WhyExplore() {
               Start Your Journey Today
             </Button>
           </div>
-          <div className={cx("w-full h-[448px] order-first sm:order-none")}>
+          <div className={cx("w-full h-[448px] order-first")}>
             <GradientImage
               className="rounded-[16px] w-full"
-              src="/images/explore/boat.png"
+              src="/images/nature/river5.png"
             />
           </div>
         </div>

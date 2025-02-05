@@ -18,19 +18,19 @@ export default function Hero() {
         <p className={cx("text-sm text-center font-semibold md:text-base lg:text-lg")}>
           Borneo river cruise
         </p>
-        <p className={cx("text-3xl leading-tight font-prata text-center md:text-4xl lg:text-5xl xl:text-7xl xl:w-[60%]")}>
+        <p className={cx("text-title leading-tight font-prata text-center xl:w-[60%]")}>
           Discover Borneo's Hidden Heart
         </p>
-        <p className={cx("text-sm  leading-tight text-center sm:text-base md:text-lg lg:w-[80%]")}>
+        <p className={cx("leading-tight text-center text-description lg:w-[80%]")}>
           Immerse yourself in the beauty of Borneo's rivers, where each journey
           unveils the stories of the land, wildlife, and people.
         </p>
-        <Button className="text-18-d hover:shadow-lg hover:scale-105 transition w-fit mx-auto">
+        <Button>
           Explore Our Cruises
         </Button>
       </div>
 
-      <GradientImage src="/images/homepage/hero-1.jpeg" className=""/>
+      <GradientImage src="/images/boats/exterior/boat3.png" className=""/>
     </div>
   );
 }

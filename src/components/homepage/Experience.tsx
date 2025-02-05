@@ -6,17 +6,17 @@ import ExperienceCard from './ExperienceCard'
 const Experience = () => {
     const data = [
         {
-            img: "/images/homepage/experience/experience-2.png",
+            img: "/images/people/family5.png",
             title: "Central Borneo",
             description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo..."
         },
         {
-            img: "/images/homepage/experience/experience-1.png",
+            img: "/images/wildlife/orangutan6.png",
             title: "Pangkalan Bun",
             description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo..."
         },
         {
-            img: "/images/explore/nature/dayak-culture.jpeg",
+            img: "/images/people/woman5.png",
             title: "Dayak Culture",
             description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo..."
         }
@@ -28,10 +28,10 @@ const Experience = () => {
                 <span className="text-sm font-bold tracking-wider w-full">
                     EXPLORE
                 </span>
-                <h2 className="font-prata w-full font-normal leading-[3rem] text-4xl">
+                <h2 className="font-prata w-full text-subtitle leading-[3rem]">
                     Experiences Borneo
                 </h2>
-                <p className="text-xs sm:text-sm text-[#372817] md:text-base">
+                <p className="text-description text-[#372817]">
                     From close encounters with orangutans to exploring the cultural heritage of the Dayak people, our experiences are crafted to inspire, educate, and connect you to the heart of Borneo.
                 </p>
                 <Button className="text-16-d hover:shadow-lg hover:scale-105 transition w-fit">

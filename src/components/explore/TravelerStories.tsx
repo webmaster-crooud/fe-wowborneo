@@ -9,18 +9,18 @@ export default function TravelerStories() {
     <div className={cx("landscape:min-lg:text-18-d relative", "text-14-m")}>
       <Container>
         <div className="grid grid-cols-1 justify-between gap-10 sm:grid-cols-2">
-          <div className={cx("w-full h-[392px] ")}>
+          <div className={cx("w-full h-[392px] sm:order-last")}>
             <GradientImage
               className="rounded-[16px] w-full"
-              src="/images/explore/activities.png"
+              src="/images/people/family3.png"
             />
           </div>
           <div className="flex flex-col gap-4">
-            <h1 className="text-2xl leading-normal font-prata lg:text-4xl">
+            <h1 className="leading-normal font-prata text-subtitle">
               Traveler Stories from
               <span className="block">Central Kalimantan</span>
             </h1>
-            <p className="text-[17px] leading-7">
+            <p className="text-description leading-7">
               See Central Kalimantan through the eyes of past travelers who have
               joined Wow Borneo. From unforgettable wildlife encounters to
               moments of connection with the Dayak people, these stories capture

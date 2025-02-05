@@ -57,7 +57,7 @@ export default function Footer() {
             <Container className={cx("py-1 flex flex-row w-full sm:justify-center lg:py-80-d")}>
               <div className={cx("w-full flex flex-col items-center justify-center")}>
                 <div className={cx("w-[250.14px] h-[35px] relative")}>
-                  <Image alt="image" fill src={"/images/ui/Stars.png"} />
+                  <Image alt="image" fill src={"/images/icons/stars.png"} />
                 </div>
                 <p className={cx("mt-40-d")}>
                   TripAdvisor Traveller's Choise Award Winner 2024
@@ -72,19 +72,19 @@ export default function Footer() {
               <div className={cx("flex flex-row w-full gap-6 sm:justify-center sm:flex-col xl:flex-row")}>
                 <div className={cx("flex flex-row gap-16-d xl:items-end")}>
                   <div className={cx("flex items-center")}>
-                    <Image width={15} height={15} alt="image" src={"/images/ui/ig.png"} />
+                    <Image width={15} height={15} alt="image" src={"/images/icons/socialMedia/instagram.png"} />
                   </div>
                   <p>Instagram</p>
                 </div>
                 <div className={cx("flex flex-row gap-16-d xl:items-end")}>
                   <div className={cx("flex items-center")}>
-                    <Image width={15} height={15} alt="image" src={"/images/ui/yt.png"} />
+                    <Image width={15} height={15} alt="image" src={"/images/icons/socialMedia/youtube.png"} />
                   </div>
                   <p>Youtube</p>
                 </div>
                 <div className={cx("flex flex-row gap-16-d xl:items-end")}>
                   <div className={cx("flex items-center")}>
-                    <Image width={15} height={15} alt="image" src={"/images/ui/li.png"} />
+                    <Image width={15} height={15} alt="image" src={"/images/icons/socialMedia/linkedin.png"} />
                   </div>
                   <p>Linkedin</p>
                 </div>
@@ -105,7 +105,7 @@ export default function Footer() {
           Book your cruise
         </Button>
         <GradientImage
-          src="/images/ui/dayak-ornamen.png"
+          src="/images/dayak-ornamen.png"
           className="opacity-15 absolute z-0 top-0"
         />
       </div>

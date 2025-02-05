@@ -6,17 +6,17 @@ import Button from "../ui/button";
 
 const list = [
   {
-    icon: "/images/boats/rahaipangun/Spacious.svg",
+    icon: "/images/icons/boats/banin-with-AC.png",
     title: "Luxury and Comfort",
     desc: "Unwind in air-conditioned cabins with ensuite bathrooms.",
   },
   {
-    icon: "/images/boats/rahaipangun/AirConditioner.svg",
+    icon: "/images/icons/boats/luxurious.png",
     title: "Exclusive Experiences",
     desc: "Guided tours of Sebangau National Park and Dayak villages",
   },
   {
-    icon: "/images/boats/rahaipangun/Renowned.svg",
+    icon: "/images/icons/boats/panoramic.png",
     title: "Panoramic Views",
     desc: "Watch the scenery from the screened saloon or rooftop deck.",
   },
@@ -27,10 +27,10 @@ export default function TheSpiritOfKalimantan() {
     <Container className="pt-1">
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         <div>
-          <p className={cx("text-40-d leading-tight font-prata ")}>
+          <p className={cx("text-subtitle leading-tight font-prata ")}>
             The Spirit of Kalimantan
           </p>
-          <p className={cx("text-20-d leading-tight mt-6")}>
+          <p className={cx("text-description leading-tight mt-6")}>
             The Spirit of Kalimantan is a luxurious vessel designed for those
             who want the ultimate blend of adventure and relaxation. Enjoy
             panoramic views from the covered deck or ascend to the rooftop for
@@ -63,7 +63,7 @@ export default function TheSpiritOfKalimantan() {
         <div className={cx("w-full aspect-[9/12] order-first sm:order-none xl:aspect-square")}>
           <GradientImage
             className="rounded-[16px]"
-            src="/images/homepage/introduction/Boat Deck.png"
+            src="/images/boats/exterior/boat.png"
           />
         </div>
       </div>

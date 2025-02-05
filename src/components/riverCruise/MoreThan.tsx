@@ -13,17 +13,17 @@ export default function MoreThan() {
         <p className={cx("uppercase font-semibold w-full lg:text-base")}>
           More Than a Cruise
         </p>
-        <p className={cx("font-prata text-4xl w-full lg:text-5xl")}>
+        <p className={cx("font-prata text-subtitle w-full")}>
           An Immersive Experience
         </p>
-        <p className="lg:w-[60%] lg:text-base">
+        <p className="text-description lg:w-[60%]">
           A Wow Borneo cruise is more than just a journey; it's a passage into a
           world of wonder and tranquility. Our river expeditions are designed to
           blend adventure with relaxation, offering the chance to encounter
           orangutans in their natural habitat, engage with local Dayak
           communities, and soak in the serene beauty of Borneo's landscapes.
         </p>
-        <p className="lg:w-[60%] lg:text-base">
+        <p className="text-description lg:w-[60%]">
           Whether you're a wildlife enthusiast, a cultural explorer, or simply
           someone in search of peace and inspiration, our cruises provide an
           unforgettable experience. Let the river carry you to places few have

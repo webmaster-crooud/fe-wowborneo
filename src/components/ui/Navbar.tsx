@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Container from "./Container";
 import Button from "./button";
 import { cx } from "class-variance-authority";
@@ -13,6 +13,7 @@ import { useLenis } from "@studio-freight/react-lenis";
 import { useQuery } from "@tanstack/react-query";
 import { fetchData } from "@/lib/fetchData";
 import GradientImage from "./GradientImage";
+import Link from "next/link";
 
 interface ServiceCategoryName {
   id: string;
@@ -32,6 +33,19 @@ export default function Navbar() {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
   const { contextSafe } = useGSAP({ scope: container });
   const lenis = useLenis();
+
+  useEffect(() => {
+    gsap.to(".navbar", {
+      opacity: toggleMenu ? 0 : 1,
+      display: toggleMenu ? "hidden" : "flex",
+    });
+
+    gsap.to(".container-menu-navbar", {
+      x: toggleMenu ? 0 : "-100%",
+      duration: 0.4,
+      ease: "power1.inOut",
+    });
+  }, [toggleMenu]);
 
   const menuItems = [
     { label: "Message", href: "/our-services/message" },
@@ -67,12 +81,6 @@ export default function Navbar() {
 
   const clickToggleMenu = contextSafe(() => {
     setToggleMenu(!toggleMenu);
-
-    gsap.to(".container-menu-navbar", {
-      x: !toggleMenu ? 0 : "-100%",
-      duration: 0.4,
-      ease: "power1.inOut",
-    });
 
     if (!toggleMenu) {
       state.updateNavbarColorNew2(1);
@@ -121,7 +129,8 @@ export default function Navbar() {
       <Container
         className={cx(
           "relative z-20 flex flex-row justify-between items-center landscape:min-lg:py-48-d w-full text-white bg-white/5 backdrop-blur-sm",
-          "h-12 py-2 md:h-16"
+          "h-12 py-2 md:h-16",
+          "navbar"
         )}
       >
         <div
@@ -174,78 +183,42 @@ export default function Navbar() {
 
       <div
         className={cx(
-          "z-10 w-full h-screen bg-white absolute -translate-x-full landscape:min-lg:hidden top-0 left-0",
+          "z-40 w-full h-screen bg-[#F1E6DD] absolute top-0 left-0 xl:hidden",
           "container-menu-navbar"
         )}
       >
-        <Container
-          className={cx(
-            "py-80-m text-40-m flex flex-col justify-center h-full gap-40-m"
-          )}
-        >
-          <TransitionLink href={"/"} className={cx("")}>
-            Reservation
-          </TransitionLink>
-          <div
-            className={cx(
-              "flex flex-row items-center landscape:min-lg:gap-8 cursor-pointer relative",
-              "gap-16-m"
-            )}
+        <div className="h-full w-full z-50 p-6 flex flex-col justify-between sm:p-10">
+          <p
+            className="font-bold text-2xl cursor-pointer"
+            onClick={clickToggleMenu}
           >
-            <div
-              className={cx(
-                menuItems.some((item) => pathname === item.href)
-                  ? "opacity-100"
-                  : "opacity-50",
-                ""
-              )}
-              onClick={clickToggle}
-            >
-              Our Services
-            </div>
-            <div
-              className={cx(
-                menuItems.some((item) => pathname === item.href)
-                  ? "opacity-100"
-                  : "opacity-50",
-                "w-[0.833vw] h-[0.521vw] relative",
-                "w-[20px] h-[20px]"
-              )}
-              onClick={clickToggle}
-            >
-              <ArrowDown />
-            </div>
-            <div
-              className={cx(
-                "landscape:min-lg:p-20 bg-white w-max absolute z-10 landscape:min-lg:top-[150%] rounded-lg text-secondary hidden opacity-0 shadow-md border border-secondary/5",
-                "p-24-m text-14-m top-[120%]",
-                "details-our-services"
-              )}
-            >
-              {data?.data?.items.map((item, key) => (
-                <TransitionLink
-                  key={key}
-                  href={`/our-services/${item.id}`}
-                  className={cx(
-                    pathname === `/our-services/${item.id}`
-                      ? "font-bold"
-                      : "font-normal",
-                    "py-[0.93vw]"
-                  )}
-                  opacity={false}
-                >
-                  {item.name}
-                </TransitionLink>
-              ))}
+            X
+          </p>
+          <div className="space-y-5">
+            <p className="text-[#563b28b3] text-xs sm:text-xl">Menu</p>
+            <div className="flex flex-col font-medium text-2xl font-prata gap-1 sm:text-5xl  w-36">
+              <p>Discover Borneo's Hidden Heart</p>
             </div>
           </div>
-          <TransitionLink href={"/news"} className={cx("")}>
-            News
-          </TransitionLink>
-          <TransitionLink href={"/contact"} className={cx("")}>
-            Contact
-          </TransitionLink>
-        </Container>
+          <div className="grid grid-cols-2 gap-4 py-8">
+            <div className="space-y-4 text-xs sm:text-sm">
+              <p className="text-[#563b28b3]">BOATS</p>
+              <div className="flex flex-col gap-2 text-[#563b28]">
+                <Link href={"/"}>Rahai'i Pangun</Link>
+                <Link href={"/"}>Kumai</Link>
+                <Link href={"/"}>Sekonyer</Link>
+              </div>
+            </div>
+            <div className="space-y-4 text-xs sm:text-sm">
+              <p className="text-[#563b28b3]">DISCOVER</p>
+              <div className="flex flex-col gap-2 text-[#563b28]">
+                <Link href={"/"}>Orangutan Village</Link>
+                <Link href={"/"}>Tanjung Puting Rainforest</Link>
+                <Link href={"/"}>Katingan River</Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import { cx } from "class-variance-authority";
 import GradientImage from "../ui/GradientImage";
 import CardWhyChoose from "./CardWhyChoose";
 import Container from "../ui/Container";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function FeaturedCruises() {
@@ -13,21 +13,21 @@ export default function FeaturedCruises() {
   const data = [
     {
       head: "Exclusive Access",
-      title:
+      desc:
         "Visit Camp Leakey, a renowned orangutan rehabilitation center, accessible only through special partnerships.",
-      img: "/images/homepage/card-why/image-1.jpg",
+      img: "/images/wildlife/orangutan2.png",
     },
     {
-      head: "Exclusive Access",
-      title:
+      head: "Local Guideline",
+      desc:
         "Visit Camp Leakey, a renowned orangutan rehabilitation center, accessible only through special partnerships.",
-      img: "/images/homepage/card-why/image-2.jpg",
+      img: "/images/people/woman2.png",
     },
     {
-      head: "Exclusive Access",
-      title:
+      head: "Sustainable Statement",
+      desc:
         "Visit Camp Leakey, a renowned orangutan rehabilitation center, accessible only through special partnerships.",
-      img: "/images/homepage/card-why/image-3.jpg",
+      img: "/images/people/man5.png",
     },
   ];
   return (
@@ -38,8 +38,8 @@ export default function FeaturedCruises() {
           "text-center flex flex-col justify-center items-center relative py-2"
         )}
       >
-        <h1 className={cx("text-48-d font-prata")}>Featured Cruises</h1>
-        <p className={cx("mt-24-d lg:w-[50%]")}>
+        <h1 className={cx("text-subtitle font-prata")}>Featured Cruises</h1>
+        <p className={cx("mt-24-d text-description lg:w-[50%]")}>
           Choose from our carefully crafted cruises, each offering a unique
           experience of Borneo's natural beauty and cultural treasures.
         </p>
@@ -62,10 +62,10 @@ export default function FeaturedCruises() {
             </div>
           </div>
           <p className={cx("uppercase font-medium w-full xl:text-lg")}>4 Day 3 night</p>
-          <p className={cx("font-prata text-xl md:text-3xl w-full lg:w-[60%] lg:text-5xl xl:text-6xl")}>
+          <p className={cx("font-prata text-subtitle w-full lg:w-[60%]")}>
             Orangutan & Dayak Village Cruise
           </p>
-          <p className={cx("lg:w-[55%] xl:text-lg xl:w-[50%]")}>
+          <p className={cx("lg:w-[55%] text-description xl:w-[50%]")}>
             An expedition that combines encounters with Kalimantan's iconic
             orangutans and visits to the Dayak villages, rich in culture and
             history.
@@ -80,7 +80,7 @@ export default function FeaturedCruises() {
           <div
             className={cx("hidden w-full h-full bg-[#37281780]/50 absolute z-10 md:block")}
           ></div>
-          <Image src="/images/homepage/orang utan.jpeg" alt="picture of orang utan" className="w-full rounded-lg md:rounded-none" height={1000} width={1000} />
+          <Image src="/images/wildlife/orangutan.png" alt="picture of orang utan" className="w-full rounded-lg md:rounded-none" height={1000} width={1000} />
         </div>
       </Container>
       {/* Section 3 */}
@@ -91,28 +91,34 @@ export default function FeaturedCruises() {
           )}
         >
           <p className={cx("uppercase font-medium w-full")}>TOC HERE</p>
-          <p className={cx("font-prata text-xl md:text-3xl w-full lg:w-[50%] lg:text-5xl xl:text-6xl")}>
-          Why Choose Wow Borneo?
+          <p className={cx("font-prata text-subtitle w-full lg:w-[50%]")}>
+            Why Choose Wow Borneo?
           </p>
-          <p className={cx("lg:w-[50%]")}>
-          Choose from our carefully crafted cruises, each offering a unique experience of Borneo’s natural beauty and cultural treasures.
+          <p className={cx("text-description lg:w-[50%]")}>
+            Choose from our carefully crafted cruises, each offering a unique experience of Borneo’s natural beauty and cultural treasures.
           </p>
         </div>
       </Container>
       {/* Section 4 */}
       <Container className={cx(
-        "py-2 grid gap-4 transition-all duration-500",
-        expandedIndex === null
-          ? "grid-cols-1 lg:grid-cols-3"
-          : "grid-cols-[1fr_2fr_1fr]"
-      )}
-      >
-        {data.map((item, index) => (
-          <CardWhyChoose key={index}
-            item={item}
-            isOpen={expandedIndex === index}
-            onClick={() => setExpandedIndex(expandedIndex === index ? null : index)} height="h-full" />
-        ))}
+        "py-2 grid gap-4 transition-all duration-500 grid-cols-1 lg:grid-cols-12",
+      )}>
+        {data.map((item, index) => {
+          const colSpan = expandedIndex === null
+            ? "lg:col-span-4"
+            : (expandedIndex === index ? "lg:col-span-6" : "lg:col-span-3");
+
+          return (
+            <CardWhyChoose
+              colSpan={colSpan}
+              key={index}
+              item={item}
+              isOpen={expandedIndex === index}
+              onClick={() => setExpandedIndex((prev) => (prev === index ? null : index))}
+              height="h-full"
+            />
+          );
+        })}
       </Container>
     </div>
   );

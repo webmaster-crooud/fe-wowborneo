@@ -6,17 +6,17 @@ import Button from "../ui/button";
 
 const list = [
   {
-    icon: "/images/boats/rahaipangun/Spacious.svg",
+    icon: "/images/icons/boats/ship.png",
     title: "Traditional Hull",
     desc: "Built with a classic klotok hull for an authentic Bornean experience.",
   },
   {
-    icon: "/images/boats/rahaipangun/AirConditioner.svg",
+    icon: "/images/icons/boats/meals-on-deck.png",
     title: "Upper Deck Dining",
     desc: "Dine and relax with unimpeded views of the jungle. ",
   },
   {
-    icon: "/images/boats/rahaipangun/Renowned.svg",
+    icon: "/images/icons/boats/banin-with-AC.png",
     title: "Comfortable Cabins",
     desc: "Each cabin comes with air conditioning and ensuite bathrooms.",
   },
@@ -29,12 +29,12 @@ export default function Sekonyer() {
         <div className={cx("w-full aspect-[9/12] order-first xl:aspect-square")}>
           <GradientImage
             className="rounded-[16px]"
-            src="/images/homepage/introduction/Boat Deck.png"
+            src="/images/boats/exterior/boat.png"
           />
         </div>
         <div>
-          <p className={cx("text-40-d leading-tight font-prata ")}>Sekonyer</p>
-          <p className={cx("text-20-d leading-tight mt-6")}>
+          <p className={cx("text-subtitle leading-tight font-prata ")}>Sekonyer</p>
+          <p className={cx("text-description leading-tight mt-6")}>
             For those seeking a traditional experience, the Sekonyer offers an
             authentic journey through Kalimantan’s jungles. This classic klotok
             boat has been outfitted with modern amenities, including

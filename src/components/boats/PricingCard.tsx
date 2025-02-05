@@ -9,7 +9,7 @@ const PricingCard = ({ name, price, img }: { name: string, price: string, img: s
             <div className="absolute inset-0 bg-black/40 z-10"></div>
             <Image src={img} alt="picture of orang utan" className="w-full object-cover h-full aspect-square" height={1000} width={1000} />
             <div className="absolute bottom-0 p-4 text-white z-20 space-y-3">
-                <Image src={"/images/ui/white stars.png"} alt="star image" width={1000} height={1000} className="h-full object-cover w-[70%]" />
+                <Image src={"/images/icons/white-stars.png"} alt="star image" width={1000} height={1000} className="h-full object-cover w-[70%]" />
                 <p className="uppercase text-xs font-medium">{name}</p>
                 <p className="text-2xl font-prata">$ {price}</p>
             </div>

@@ -7,17 +7,17 @@ import { useRouter } from "next/navigation";
 
 const list = [
   {
-    icon: "/images/boats/rahaipangun/Spacious.svg",
+    icon: "/images/icons/boats/eco-friendly.png",
     title: "Eco-Friendly Design",
     desc: "Solar-powered for a greener cruising experience.",
   },
   {
-    icon: "/images/boats/rahaipangun/AirConditioner.svg",
+    icon: "/images/icons/boats/sun-deck.png",
     title: "Intimate Spaces",
     desc: "Enjoy the river views from cozy lounges and sun decks.",
   },
   {
-    icon: "/images/boats/rahaipangun/Renowned.svg",
+    icon: "/images/icons/boats/banin-with-AC.png",
     title: "3 Cabins with Ensuites",
     desc: "Comfortably accommodates up to six guests with privacy and style.",
   },
@@ -29,8 +29,8 @@ export default function Kumai() {
     <Container className="pt-1">
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         <div>
-          <p className={cx("text-40-d leading-tight font-prata ")}>Kumai</p>
-          <p className={cx("text-20-d leading-tight mt-6")}>
+          <p className={cx("text-subtitle leading-tight font-prata ")}>Kumai</p>
+          <p className={cx("text-description leading-tight mt-6")}>
             Step aboard Kumai, the latest addition to our fleet, designed for
             luxury with a commitment to eco-conscious travel. Solar-powered air
             conditioning keeps the cabins comfortable while minimizing
@@ -67,7 +67,7 @@ export default function Kumai() {
         <div className={cx("w-full aspect-[9/12] order-first sm:order-none xl:aspect-square")}>
           <GradientImage
             className="rounded-[16px]"
-            src="/images/homepage/introduction/Boat Deck.png"
+            src="/images/boats/exterior/boat.png"
           />
         </div>
       </div>

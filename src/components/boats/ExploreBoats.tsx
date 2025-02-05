@@ -15,10 +15,10 @@ export default function Combination() {
         )}
       >
         <p className={cx("uppercase text-xs font-medium w-full xl:text-lg")}>Fleet Features and Commitment to Eco-Tourism</p>
-        <p className={cx("font-prata text-2xl md:text-3xl w-full xl:w-[60%] lg:text-5xl xl:text-6xl")}>
+        <p className={cx("font-prata text-subtitle w-full xl:w-[60%]")}>
           Eco-Friendly, Locally Crafted, and Uniquely Borneo
         </p>
-        <p className={cx("xl:text-lg xl:w-[50%]")}>
+        <p className={cx("text-description xl:w-[50%]")}>
           At Wow Borneo, we are committed to preserving Kalimantan’s natural beauty and supporting its local communities. Each of our boats is built using sustainable practices, and we partner closely with local artisans, farmers, and guides. From solar-powered amenities to natural products onboard, our fleet is a testament to responsible tourism. Join us in supporting a future where travel uplifts people and protects the environment.
         </p>
         <Button className="text-18-d hover:shadow-lg hover:scale-105 transition w-fit ">
@@ -35,7 +35,7 @@ export default function Combination() {
         <div
           className={cx("hidden w-full h-full bg-[#37281780]/50 absolute z-10 md:block")}
         ></div>
-        <Image src="/images/boats/river.jpeg" alt="picture of river" className="w-full rounded-lg md:rounded-none" height={1000} width={1000} />
+        <Image src="/images/nature/river.png" alt="picture of river" className="w-full rounded-lg md:rounded-none" height={1000} width={1000} />
       </div>
     </Container>
   );

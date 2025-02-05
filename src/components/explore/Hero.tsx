@@ -18,10 +18,10 @@ export default function Hero() {
         <p className={cx("text-sm text-center font-semibold md:text-base lg:text-lg")}>
           EXPLORE BORNEO
         </p>
-        <p className={cx("text-3xl leading-tight font-prata text-center md:text-4xl lg:text-5xl xl:text-7xl xl:w-[60%]")}>
+        <p className={cx("text-title leading-tight font-prata text-center xl:w-[60%]")}>
           Nature, Culture, And Adventure
         </p>
-        <p className={cx("text-sm leading-tight text-center sm:text-base md:text-lg lg:w-[80%]")}>
+        <p className={cx("text-description leading-tight text-center lg:w-[80%]")}>
           Welcome to the heart of Borneo. Central Kalimantan is a land of captivating landscapes, rich traditions, and untouched wilderness. Here, every riverbend and forest trail reveals a new story, from the quiet power of Sebangau National Park to the vibrant cultures of the Dayak people. Let Wow Borneo guide you into the wonders of this region—where each experience is designed to immerse you in the beauty, history, and spirit of Central Kalimantan.
         </p>
         <Button className="text-18-d hover:shadow-lg hover:scale-105 transition w-fit mx-auto">
@@ -29,7 +29,7 @@ export default function Hero() {
         </Button>
       </div>
 
-      <GradientImage src="/images/explore/culture.jpeg" />
+      <GradientImage src="/images/people/crowd.png" />
     </div>
   );
 }

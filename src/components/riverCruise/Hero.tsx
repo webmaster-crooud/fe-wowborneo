@@ -18,10 +18,10 @@ export default function Hero() {
         <p className={cx("text-sm text-center font-semibold md:text-base lg:text-lg")}>
           river cruise
         </p>
-        <p className={cx("text-3xl leading-tight font-prata text-center md:text-4xl lg:text-5xl xl:text-7xl xl:w-[60%]")}>
+        <p className={cx("text-title leading-tight font-prata text-center xl:w-[60%]")}>
           Embark on a Journey Through the Heart of Borneo
         </p>
-        <p className={cx("text-sm  leading-tight text-center sm:text-base md:text-lg lg:w-[80%]")}>
+        <p className={cx("text-description leading-tight text-center lg:w-[80%]")}>
           Discover the mystery, beauty, and culture of Kalimantan’s rivers with
           our unique, story-driven river cruises. Each journey is crafted to
           immerse you in the wonders of Borneo's landscapes, wildlife, and
@@ -32,7 +32,7 @@ export default function Hero() {
         </Button>
       </div>
 
-      <GradientImage src="/images/riverCruise/tanjung-putih-2.jpeg" />
+      <GradientImage src="/images/nature/river3.png" />
     </div>
   );
 }

@@ -5,7 +5,6 @@ import { toggleNavbar } from "@/stores/navbar";
 import useVariantsOnScroll from "@/hooks/useVariantsOnScroll";
 import Hero from "./Hero"
 import Navbar from "@/components/ui/Navbar";
-import About from "./About";
 import WhrereIsSebangau from "./WhereIsSebangau";
 import Divider from "@/components/ui/Divider";
 import TopExperience from "./TopExperience";
@@ -33,11 +32,9 @@ export default function DetailExplore() {
     <>
       <Navbar />
       <Hero />
-      <About />
-      <Divider />
       <WhrereIsSebangau />
-      <TopExperience />
       <Divider />
+      <TopExperience />
       <OrangutanConversation />
       <WhyExplore />
       <TravelTips />

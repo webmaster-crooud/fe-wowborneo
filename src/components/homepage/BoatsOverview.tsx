@@ -15,8 +15,8 @@ export default function BoatsOverview() {
         )}
       >
         <p className="text-sm w-full">OUR BOATS</p>
-        <h2 className={cx("text-4xl font-prata")}>Boats Overview</h2>
-        <p className={cx("lg:w-[60%]")}>
+        <h2 className={cx("text-subtitle font-prata")}>Boats Overview</h2>
+        <p className={cx("text-description lg:w-[60%]")}>
           Our fleet of purpose-built river cruisers provides the perfect blend of comfort and authenticity. Each boat is crafted to bring you closer to nature while offering modern amenities to make your journey unforgettable.
         </p>
       </div>
@@ -37,10 +37,10 @@ export default function BoatsOverview() {
             </div>
           </div>
           <div className="w-full flex flex-col items-center justify-center gap-8">
-            <p className={cx("font-prata text-xl md:text-3xl w-full lg:w-[60%] lg:text-5xl xl:text-6xl")}>
+            <p className={cx("font-prata text-subtitle w-full lg:w-[60%]")}>
               Rahai Pangun
             </p>
-            <p className={cx("w-full lg:w-[55%] xl:text-lg xl:w-[50%]")}>
+            <p className={cx("w-full text-description lg:w-[55%] xl:w-[50%]")}>
               Our flagship vessel, designed for immersive exploration in the heart of Borneo.
             </p>
           </div>
@@ -56,7 +56,7 @@ export default function BoatsOverview() {
             "w-full h-44 rounded-xl overflow-hidden sm:h-80 md:rounded-none md:h-96 lg:h-full"
           )}
         >
-          <GradientImage src="/images/explore/overview/overview-3.jpeg" className="object-contain" />
+          <GradientImage src="/images/boats/exterior/boat4.png" className="object-contain" />
         </div>
       </div>
     </Container>

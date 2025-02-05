@@ -5,14 +5,14 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   variant?: "primary" | "secondary" | "primaryReverse"; // Menambahkan varian secondary
   className?: string;
-  rounded?: "rounded-full" | "rounded-2xl";
+  rounded?: string;
 }
 
 export default function Button({
   children,
   variant = "primary",
   className = "",
-  rounded = "rounded-2xl",
+  rounded = "rounded-lg",
   ...props
 }: ButtonProps) {
   const variantStyles = {
@@ -25,8 +25,7 @@ export default function Button({
   return (
     <button
       className={cx(
-        "font-semibold landscape:min-lg:px-40-d landscape:min-lg:py-16-d focus:outline-none focus:ring-0 landscape:min-lg:text-18-d",
-        "text-12-d px-16-d py-[0.93vw]",
+        "font-semibold text-sm p-2 px-4 lg:text-base ",
         className,
         variantStyles[variant],
         rounded

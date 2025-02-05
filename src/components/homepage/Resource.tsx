@@ -15,10 +15,10 @@ export default function Resource() {
         >
 
           <div className="w-full flex flex-col items-center justify-center gap-8">
-            <p className={cx("font-prata text-xl md:text-3xl w-full lg:w-[60%] lg:text-5xl xl:text-6xl")}>
+            <p className={cx("font-prata text-subtitle w-full lg:w-[60%]")}>
               Check Our Resources
             </p>
-            <p className={cx("w-full lg:w-[55%] xl:text-lg xl:w-[50%]")}>
+            <p className={cx("w-full text-description lg:w-[55%] xl:w-[50%]")}>
               Prepare for your journey with valuable insights and tips from our travel resources. Learn more about Kalimantan, the local culture, and how to make the most of your river cruise adventure.
             </p>
           </div>
@@ -39,7 +39,7 @@ export default function Resource() {
             "w-full h-44 rounded-xl overflow-hidden sm:h-80 md:rounded-none md:h-96 lg:h-full"
           )}
         >
-          <GradientImage src="/images/homepage/Resources.jpeg" className="object-contain" />
+          <GradientImage src="/images/people/man4.png" className="object-contain" />
         </div>
       </div>
     </Container>
