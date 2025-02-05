@@ -33,7 +33,7 @@ export default function RootLayout({
     <ReactQueryClientProvider>
       <html lang="en">
         <body
-          className={`${openSans.variable} ${prata.variable} antialiased font-body bg-[#FAEEE6]`}
+          className={`${openSans.variable} ${prata.variable} antialiased font-body`}
         >
           <Providers>{children}</Providers>
           <Toaster />

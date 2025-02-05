@@ -88,44 +88,74 @@ export default function Navbar() {
     queryFn: () => fetchData("service-category/show-all"),
   });
 
+  const navbarLinks = [
+    {
+      label: "River Cruise",
+      href: "/river-cruise",
+      className: "navbar-link",
+    },
+    {
+      label: "Boats",
+      href: "/boats",
+      className: "navbar-link",
+    },
+    {
+      label: "Explore",
+      href: "/explore",
+      className: "navbar-link",
+    },
+    {
+      label: "Resources",
+      href: "/explore",
+      className: "navbar-link",
+    },
+    {
+      label: "Testimonials",
+      href: "/explore",
+      className: "navbar-link",
+    },
+  ];
+
   return (
     <div ref={container} className="h-1 fixed top-0 z-40 w-full">
       <Container
         className={cx(
           "relative z-20 flex flex-row justify-between items-center landscape:min-lg:py-48-d w-full text-white bg-white/5 backdrop-blur-sm",
-          "py-16-m"
+          "h-12 py-2 md:h-16"
         )}
       >
         <div
           className={cx(
-            "landscape:min-lg:flex flex-row gap-32 text-18-d",
+            "landscape:min-lg:flex flex-row gap-32-d text-18-d items-center",
             "hidden"
           )}
         >
-          <TransitionLink href={"/river-cruise"} className={cx("navbar-link")}>
-            River Cruise
-          </TransitionLink>
-          <TransitionLink href={"/boats"} className={cx("navbar-link")}>
-            Boats
-          </TransitionLink>
-          <TransitionLink href={"/explore"} className={cx("navbar-link")}>
-            Explore
-          </TransitionLink>
-          <TransitionLink href={"/explore"} className={cx("navbar-link")}>
-            Resources
-          </TransitionLink>
-          <TransitionLink href={"/explore"} className={cx("navbar-link")}>
-            Testimonials
-          </TransitionLink>
+          <div className={cx("flex flex-col h-[17px] justify-between")}>
+            <div className={cx("w-[19px] bg-white h-[1px]")}></div>
+            <div className={cx("w-[19px] bg-white h-[1px]")}></div>
+            <div className={cx("w-[19px] bg-white h-[1px]")}></div>
+          </div>
+          <div className={cx("w-[1px] bg-white h-[17px]")}></div>
+          <div className={cx("flex flex-row gap-32-d text-18-d")}>
+            {navbarLinks.map((link, index) => (
+              <TransitionLink
+                key={index}
+                href={link.href}
+                className={cx(link.className)}
+              >
+                {link.label}
+              </TransitionLink>
+            ))}
+          </div>
         </div>
         <div className="absolute left-1/2 -translate-x-1/2">
-          <div className={cx("w-[9.375vw] h-[4.688vw]")}>
+          <div className={cx("hidden lg:block w-28 h-12")}>
             <GradientImage src="/images/logo.png" />
           </div>
         </div>
         <div
           className={cx(
-            "text-secondary cursor-pointer landscape:min-lg:hidden text-16-m",
+            "text-secondary cursor-pointer landscape:min-lg:hidden text-sm",
             "navbar-link"
           )}
           onClick={clickToggleMenu}
@@ -133,7 +163,10 @@ export default function Navbar() {
           Menu
         </div>
         <TransitionLink href="/reservation" opacity={false}>
-          <Button className="text-18-d bg-white/30 backdrop-blur-md hover:bg-white/50">
+          <Button
+            rounded="rounded-full"
+            className="text-sm bg-white/30 backdrop-blur-md hover:bg-white/50"
+          >
             Book your cruise
           </Button>
         </TransitionLink>

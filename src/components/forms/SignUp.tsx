@@ -191,7 +191,7 @@ function SignIn({ className, ...props }: SignInProps) {
         Already have an account?{" "}
         <Link
           href="/sign-in"
-          className="underline underline-offset-4 hover:text-primary"
+          className="underline underline-offset-4 hover:text-orange-borneo"
         >
           Sign in
         </Link>{" "}

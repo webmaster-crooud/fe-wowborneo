@@ -1,20 +1,19 @@
 import { cx } from "class-variance-authority";
+import { ReactNode } from "react";
+
+interface Container {
+  children: ReactNode;
+  className?: string;
+  variant?: "py-120-d" | "py-80-d";
+}
 
 export default function Container({
   children,
   className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+  variant = "py-120-d",
+}: Container) {
   return (
-    <div
-      className={cx(
-        "landscape:min-lg:px-128",
-        "px-[5.581vw] py-[7.5rem]",
-        className
-      )}
-    >
+    <div className={cx("px-128", "px-[5.581vw]", className, variant)}>
       {children}
     </div>
   );

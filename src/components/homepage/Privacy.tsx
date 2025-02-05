@@ -20,7 +20,7 @@ export default function Privacy() {
       </div>
       <div
         className={cx(
-          "w-full landscape:min-lg:h-[54.063vw] bg-primary text-white",
+          "w-full landscape:min-lg:h-[54.063vw] bg-orange-borneo text-white",
           "min-sm:h-[90vh]",
           "h-[40vh]"
         )}

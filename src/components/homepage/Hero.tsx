@@ -14,15 +14,15 @@ export default function Hero() {
     >
       <div className="absolute inset-0 bg-black bg-opacity-30 z-10"></div>
 
-      <div className="absolute z-20 text-white landscape:min-lg:w-[50%] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex flex-col gap-10">
-        <p className={cx("text-14-d text-center font-semibold")}>
+      <div className="absolute z-20 text-white flex flex-col gap-6 items-center justify-center h-full w-full px-4 sm:px-12 md:px-16 md:gap-10">
+        <p className={cx("text-sm text-center font-semibold md:text-base lg:text-lg")}>
           Borneo river cruise
         </p>
-        <p className={cx("text-80-d leading-tight font-prata text-center")}>
-          Discover Borneo’s Hidden Heart
+        <p className={cx("text-3xl leading-tight font-prata text-center md:text-4xl lg:text-5xl xl:text-7xl xl:w-[60%]")}>
+          Discover Borneo's Hidden Heart
         </p>
-        <p className={cx("text-20-d leading-tight text-center")}>
-          Immerse yourself in the beauty of Borneo’s rivers, where each journey
+        <p className={cx("text-sm  leading-tight text-center sm:text-base md:text-lg lg:w-[80%]")}>
+          Immerse yourself in the beauty of Borneo's rivers, where each journey
           unveils the stories of the land, wildlife, and people.
         </p>
         <Button className="text-18-d hover:shadow-lg hover:scale-105 transition w-fit mx-auto">
@@ -30,7 +30,7 @@ export default function Hero() {
         </Button>
       </div>
 
-      <GradientImage src="/images/hero.jpg" />
+      <GradientImage src="/images/homepage/hero-1.jpeg" className=""/>
     </div>
   );
 }

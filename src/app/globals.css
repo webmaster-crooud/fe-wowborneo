@@ -2,6 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bw: 1920;
+  --p-lh: 1.2;
+
+  /* font-size */
+  --p-8: calc((8 / var(--bw)) * 100 * 1vw);
+  --p-16: calc((16 / var(--bw)) * 100 * 1vw);
+  --p-18: calc((18 / var(--bw)) * 100 * 1vw);
+  --p-20: calc((20 / var(--bw)) * 100 * 1vw);
+  --p-24: calc((24 / var(--bw)) * 100 * 1vw);
+  --p-32: calc((32 / var(--bw)) * 100 * 1vw);
+  --p-40: calc((40 / var(--bw)) * 100 * 1vw);
+  --p-48: calc((48 / var(--bw)) * 100 * 1vw);
+  --p-56: calc((56 / var(--bw)) * 100 * 1vw);
+  --p-64: calc((64 / var(--bw)) * 100 * 1vw);
+  --p-72: calc((72 / var(--bw)) * 100 * 1vw);
+  --p-80: calc((80 / var(--bw)) * 100 * 1vw);
+  --p-88: calc((88 / var(--bw)) * 100 * 1vw);
+  --p-96: calc((96 / var(--bw)) * 100 * 1vw);
+  --p-104: calc((104 / var(--bw)) * 100 * 1vw);
+  --p-112: calc((112 / var(--bw)) * 100 * 1vw);
+  --p-120: calc((120 / var(--bw)) * 100 * 1vw);
+  --p-128: calc((128 / var(--bw)) * 100 * 1vw);
+  --p-136: calc((136 / var(--bw)) * 100 * 1vw);
+  --p-144: calc((144 / var(--bw)) * 100 * 1vw);
+  --p-152: calc((152 / var(--bw)) * 100 * 1vw);
+  --p-160: calc((160 / var(--bw)) * 100 * 1vw);
+  --p-168: calc((168 / var(--bw)) * 100 * 1vw);
+  --p-176: calc((176 / var(--bw)) * 100 * 1vw);
+  --p-184: calc((184 / var(--bw)) * 100 * 1vw);
+  --p-192: calc((192 / var(--bw)) * 100 * 1vw);
+  --p-200: calc((200 / var(--bw)) * 100 * 1vw);
+  --p-208: calc((208 / var(--bw)) * 100 * 1vw);
+  --p-216: calc((216 / var(--bw)) * 100 * 1vw);
+  --p-224: calc((224 / var(--bw)) * 100 * 1vw);
+  --p-232: calc((232 / var(--bw)) * 100 * 1vw);
+  --p-240: calc((240 / var(--bw)) * 100 * 1vw);
+  --p-248: calc((248 / var(--bw)) * 100 * 1vw);
+  --p-256: calc((256 / var(--bw)) * 100 * 1vw);
+  --p-264: calc((264 / var(--bw)) * 100 * 1vw);
+  --p-272: calc((272 / var(--bw)) * 100 * 1vw);
+  --p-280: calc((280 / var(--bw)) * 100 * 1vw);
+  --p-288: calc((288 / var(--bw)) * 100 * 1vw);
+  --p-296: calc((296 / var(--bw)) * 100 * 1vw);
+  --p-304: calc((304 / var(--bw)) * 100 * 1vw);
+  --p-312: calc((312 / var(--bw)) * 100 * 1vw);
+  --p-320: calc((320 / var(--bw)) * 100 * 1vw);
+}
+
+@media (max-width: 640px) {
+  :root {
+    --bw: 430;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) and (orientation: portrait) {
+  :root {
+    --bw: 832;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
+  :root {
+    --bw: 832;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
+  :root {
+    --bw: 1152;
+  }
+}
+
 /* Apply a custom font to the body */
 body {
   position: relative;
@@ -115,6 +188,17 @@ body {
     border-left: 2px solid #ccc; /* Memberi garis di sebelah kiri blockquote */
   }
 
+  /* Mengatur margin untuk heading */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0.25rem; /* Jarak atas heading */
+    margin-bottom: 0.25rem; /* Jarak bawah heading */
+  }
+
   /* Mengatur margin dan padding untuk gambar */
   img {
     margin-top: 0.25rem; /* Jarak atas untuk gambar */
@@ -159,28 +243,6 @@ body {
     background-color: #f4f4f5;
     border-radius: 3px;
   }
-
-  .introduction-text {
-    font-size: 0.875rem;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    text-align: center;
-  }
-
-  .title {
-    font-family: "Prata", serif;
-    font-weight: normal;
-    line-height: 3rem;
-    font-size: 3rem;
-    text-align: center;
-  }
-
-  .description {
-    font-size: 1rem;
-    color: #372817;
-    text-align: center;
-    line-height: 1.75rem;
-  }
 }
 /* Add global styles in the base layer */
 @layer base {
@@ -196,9 +258,11 @@ body {
 
   /* Global styles for the document */
   body {
+    font-size: var(--p-18);
+    line-height: var(--p-lh);
     position: relative;
-    background-color: #ffffff;
+    color: #372817;
     overflow-x: hidden;
-    color: #0d0d0d;
+    background-color: #faeee6;
   }
 }

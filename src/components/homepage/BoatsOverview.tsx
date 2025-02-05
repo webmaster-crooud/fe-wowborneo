@@ -1,0 +1,64 @@
+import React from "react";
+import Container from "../ui/Container";
+import { cx } from "class-variance-authority";
+import CardBoats from "./CardBoats";
+import GradientImage from "../ui/GradientImage";
+import Button from "../ui/button";
+
+export default function BoatsOverview() {
+ 
+  return (
+    <Container className={cx("w-full h-full space-y-12 md:px-0")}>
+      <div
+        className={cx(
+          "text-center flex flex-col justify-center items-center gap-4 relative sm:px-8 md:px-16"
+        )}
+      >
+        <p className="text-sm w-full">OUR BOATS</p>
+        <h2 className={cx("text-4xl font-prata")}>Boats Overview</h2>
+        <p className={cx("lg:w-[60%]")}>
+          Our fleet of purpose-built river cruisers provides the perfect blend of comfort and authenticity. Each boat is crafted to bring you closer to nature while offering modern amenities to make your journey unforgettable.
+        </p>
+      </div>
+      <div className={cx("lg:h-[46.875vw] w-full mt-64-d relative space-y-10 md:space-y-0")}>
+        <div
+          className={cx(
+            "w-full h-full flex flex-col gap-24-d justify-center md:items-center md:absolute md:z-20 md:text-white md:text-center md:px-32 md:py-8 md:justify-between lg:p-32"
+          )}
+        >
+          <div className="hidden space-y-3 md:block">
+            <p>2/5</p>
+            <div className="flex items-center gap-6">
+              <p>SWIPE</p>
+              <div className="w-96 bg-white h-1 rounded-full">
+                <div className="w-[60%] h-full bg-orange-borneo rounded-full"></div>
+              </div>
+              <p>{">>"}</p>
+            </div>
+          </div>
+          <div className="w-full flex flex-col items-center justify-center gap-8">
+            <p className={cx("font-prata text-xl md:text-3xl w-full lg:w-[60%] lg:text-5xl xl:text-6xl")}>
+              Rahai Pangun
+            </p>
+            <p className={cx("w-full lg:w-[55%] xl:text-lg xl:w-[50%]")}>
+              Our flagship vessel, designed for immersive exploration in the heart of Borneo.
+            </p>
+          </div>
+          <Button className="text-18-d hover:shadow-lg hover:scale-105 transition w-fit ">
+            Explore Spirit of Kalimantan
+          </Button>
+        </div>
+        <div
+          className={cx("hidden w-full h-full bg-[#37281780]/50 absolute z-10 md:block")}
+        ></div>
+        <div
+          className={cx(
+            "w-full h-44 rounded-xl overflow-hidden sm:h-80 md:rounded-none md:h-96 lg:h-full"
+          )}
+        >
+          <GradientImage src="/images/explore/overview/overview-3.jpeg" className="object-contain" />
+        </div>
+      </div>
+    </Container>
+  );
+}

@@ -8,7 +8,7 @@ interface GradientImageProps {
 
 function Divider({ src, className = "" }: GradientImageProps) {
   return (
-    <div className={cx(" w-full h-20 absolute z-10")}>
+    <div className={cx("w-full h-[4.688vw] relative z-10")}>
       <Image
         fill
         src={src ?? "/assets/dayak-divider.svg"}

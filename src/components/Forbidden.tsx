@@ -10,7 +10,7 @@ const Forbidden = () => {
         </p>
       </div>
       <div className="flex justify-center gap-3">
-        <Link href={"/"} className="btn btn-primary">
+        <Link href={"/"} className="btn btn-orange-borneo">
           Home
         </Link>
       </div>

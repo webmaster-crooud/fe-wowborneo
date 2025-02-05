@@ -9,7 +9,11 @@ import Navbar from "../ui/Navbar";
 import Footer from "../ui/Footer";
 import Introduction from "./Introduction";
 import Divider from "../ui/Divider";
-import Featured from "./Featured";
+import FeaturedCruises from "./FeaturedCruises";
+import BoatsOverview from "./BoatsOverview";
+import Resource from "./Resource";
+import Testimonial from "./Testimonial";
+import Experience from "./Experience";
 
 export default function Home() {
   const state = toggleNavbar();
@@ -31,7 +35,13 @@ export default function Home() {
       <Hero />
       <Introduction />
       <Divider />
-      <Featured />
+      <FeaturedCruises />
+      <Divider />
+      <BoatsOverview />
+      <Experience />
+      <Resource />
+      <Divider />
+      <Testimonial />
       <Footer />
     </>
   );
