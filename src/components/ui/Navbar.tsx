@@ -135,17 +135,12 @@ export default function Navbar() {
       >
         <div
           className={cx(
-            "landscape:min-lg:flex flex-row gap-32-d text-18-d items-center",
+            "md:flex flex-row gap-32-d text-18-d items-center",
             "hidden"
           )}
         >
-          <div className={cx("flex flex-col h-[17px] justify-between")}>
-            <div className={cx("w-[19px] bg-white h-[1px]")}></div>
-            <div className={cx("w-[19px] bg-white h-[1px]")}></div>
-            <div className={cx("w-[19px] bg-white h-[1px]")}></div>
-          </div>
-          <div className={cx("w-[1px] bg-white h-[17px]")}></div>
-          <div className={cx("flex flex-row gap-32-d text-18-d")}>
+
+          <div className={cx("flex flex-row gap-5 text-sm lg:gap-3 xl:text-base xl:gap-8")}>
             {navbarLinks.map((link, index) => (
               <TransitionLink
                 key={index}
@@ -164,12 +159,17 @@ export default function Navbar() {
         </div>
         <div
           className={cx(
-            "text-secondary cursor-pointer landscape:min-lg:hidden text-sm",
+            "text-secondary cursor-pointer flex gap-3 md:hidden",
             "navbar-link"
           )}
           onClick={clickToggleMenu}
         >
-          Menu
+          <div className={cx("flex flex-col h-[17px] justify-between")}>
+            <div className={cx("w-[19px] bg-white h-[1px]")}></div>
+            <div className={cx("w-[19px] bg-white h-[1px]")}></div>
+            <div className={cx("w-[19px] bg-white h-[1px]")}></div>
+          </div>
+          <div className={cx("w-[1px] bg-white h-[17px]")}></div>
         </div>
         <TransitionLink href="/reservation" opacity={false}>
           <Button

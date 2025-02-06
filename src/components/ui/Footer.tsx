@@ -68,7 +68,7 @@ export default function Footer() {
           <Container
             className={cx("py-8 w-full sm:py-1 lg:w-[35%] lg:border-r lg:border-r-black lg:py-80-d")}
           >
-            <div className={cx("h-full w-full lg:flex lg:justify-end")}>
+            <div className={cx("h-full w-full sm:flex sm:justify-center lg:justify-end")}>
               <div className={cx("flex flex-row w-full gap-6 sm:justify-center sm:flex-col xl:flex-row")}>
                 <div className={cx("flex flex-row gap-16-d xl:items-end")}>
                   <div className={cx("flex items-center")}>

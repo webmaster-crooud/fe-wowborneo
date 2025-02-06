@@ -19,10 +19,10 @@ export default function NatureAndWildlife() {
             <Button rounded="rounded-full" className="text-xs transition py-3">
               Sebangau National Park
             </Button>
-            <Button rounded="rounded-full" className="text-xs transition py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
+            <Button rounded="rounded-full" className="text-xs transition duration-300 py-3 bg-transparent border border-[#CD5A05] !text-[#CD5A05] hover:bg-[#ffe7d6] hover:border-[#b94704]">
               Orangutan Conservation
             </Button>
-            <Button rounded="rounded-full" className="text-xs transition py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
+            <Button rounded="rounded-full" className="text-xs transition duration-300 py-3 bg-transparent border border-[#CD5A05] !text-[#CD5A05] hover:bg-[#ffe7d6] hover:border-[#b94704]">
               River Ecosystems
             </Button>
           </div>
@@ -87,13 +87,13 @@ export default function NatureAndWildlife() {
         </h1>
         <div className="rounded-full w-full h-full border border-[#CD5A05] contents sm:flex sm:p-4 sm:max-w-fit">
           <div className="flex flex-col gap-4 w-full sm:flex-row sm:justify-between sm:max-w-fit">
-            <Button rounded="rounded-full" className="text-xs transition py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
-              Dayak People
+          <Button rounded="rounded-full" className="text-xs transition duration-300 py-3 bg-transparent border border-[#CD5A05] !text-[#CD5A05] hover:bg-[#ffe7d6] hover:border-[#b94704]">
+          Dayak People
             </Button>
             <Button rounded="rounded-full" className="text-xs transition py-3">
               Dayak Culture
             </Button>
-            <Button rounded="rounded-full" className="text-xs transition py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
+            <Button rounded="rounded-full" className="text-xs transition duration-300 py-3 bg-transparent border border-[#CD5A05] !text-[#CD5A05] hover:bg-[#ffe7d6] hover:border-[#b94704]">
               Traditional Longhouses
             </Button>
           </div>
@@ -159,10 +159,10 @@ export default function NatureAndWildlife() {
             <Button rounded="rounded-full" className="text-xs transition py-3">
               Palangkaraya
             </Button>
-            <Button rounded="rounded-full" className="text-xs transition py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
+            <Button rounded="rounded-full" className="text-xs transition duration-300 py-3 bg-transparent border border-[#CD5A05] !text-[#CD5A05] hover:bg-[#ffe7d6] hover:border-[#b94704]">
               Katingan Regency
             </Button>
-            <Button rounded="rounded-full" className="text-xs transition py-3 hover:bg-transparent bg-transparent border border-[#CD5A05] !text-[#CD5A05]">
+            <Button rounded="rounded-full" className="text-xs transition duration-300 py-3 bg-transparent border border-[#CD5A05] !text-[#CD5A05] hover:bg-[#ffe7d6] hover:border-[#b94704]">
               Pangkalan Bun
             </Button>
           </div>
