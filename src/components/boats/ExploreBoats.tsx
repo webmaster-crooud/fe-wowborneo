@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../ui/Container";
 import { cx } from "class-variance-authority";
-import Button from "../ui/button";
+import Button from "../button";
 import Image from "next/image";
 
 // src="/images/boats/kumai/boats.png"

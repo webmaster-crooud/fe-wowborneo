@@ -1,4 +1,4 @@
-import Button from '@/components/ui/button'
+import Button from '@/components/button'
 import GradientImage from '@/components/ui/GradientImage'
 import { cx } from 'class-variance-authority'
 import React from 'react'
@@ -7,8 +7,8 @@ const Hero = () => {
     return (
         <div
             className={cx(
-                "w-full landscape:min-lg:h-[120vh] relative",
-                "h-[75vh]",
+                "w-full relative",
+                "h-screen",
                 "fullscreen"
             )}
         >

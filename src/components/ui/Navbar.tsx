@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Container from "./Container";
-import Button from "./button";
+import Button from "../button";
 import { cx } from "class-variance-authority";
 import TransitionLink from "./TransitionLink";
 import { usePathname } from "next/navigation";
@@ -139,8 +139,11 @@ export default function Navbar() {
             "hidden"
           )}
         >
-
-          <div className={cx("flex flex-row gap-5 text-sm lg:gap-3 xl:text-base xl:gap-8")}>
+          <div
+            className={cx(
+              "flex flex-row gap-5 text-sm lg:gap-3 xl:text-base xl:gap-8"
+            )}
+          >
             {navbarLinks.map((link, index) => (
               <TransitionLink
                 key={index}
@@ -152,11 +155,11 @@ export default function Navbar() {
             ))}
           </div>
         </div>
-        <div className="absolute left-1/2 -translate-x-1/2">
+        <Link href={"/"} className="absolute left-1/2 -translate-x-1/2">
           <div className={cx("hidden lg:block w-28 h-12")}>
             <GradientImage src="/images/logo.png" />
           </div>
-        </div>
+        </Link>
         <div
           className={cx(
             "text-secondary cursor-pointer flex gap-3 md:hidden",
@@ -196,7 +199,7 @@ export default function Navbar() {
           </p>
           <div className="space-y-5">
             <p className="text-[#563b28b3] text-xs sm:text-xl">Menu</p>
-            <div className="flex flex-col font-medium text-2xl font-prata gap-1 sm:text-5xl  w-36">
+            <div className="flex flex-col font-medium text-2xl font-prata gap-1 sm:text-5xl  w-52">
               <p>Discover Borneo's Hidden Heart</p>
             </div>
           </div>

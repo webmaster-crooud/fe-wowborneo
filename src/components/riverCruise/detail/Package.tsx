@@ -3,7 +3,7 @@ import GradientImage from '@/components/ui/GradientImage'
 import { cx } from 'class-variance-authority'
 import React from 'react'
 import DetailItem from './DetailItem'
-import Button from '@/components/ui/button'
+import Button from '@/components/button'
 
 const Package = () => {
     const benefits = [

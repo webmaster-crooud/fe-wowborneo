@@ -4,7 +4,7 @@ import { cx } from "class-variance-authority";
 import React from "react";
 import GradientImage from "../ui/GradientImage";
 import Image from "next/image";
-import Button from "../ui/button";
+import Button from "../button";
 
 export default function CombinationCard({ item, height = "h-[25vw]", isOpen, onClick, colSpan }: { item: { head: string, desc: string, img: string, type: string }, height: string, isOpen: boolean, onClick: () => void, colSpan: string }) {
   return (

@@ -4,6 +4,7 @@ import "./globals.css";
 import Providers from "@/components/Providers";
 import { Toaster } from "@/components/ui/toaster";
 import { ReactQueryClientProvider } from "@/components/ReactQueryClientProvider";
+import PageNavigationAnimation from "@/components/ui/PageNavigationAnimation";
 
 export const metadata: Metadata = {
   title: "Wow Borneo",
@@ -35,7 +36,10 @@ export default function RootLayout({
         <body
           className={`${openSans.variable} ${prata.variable} antialiased font-body`}
         >
-          <Providers>{children}</Providers>
+          <Providers>
+            <PageNavigationAnimation />
+            {children}
+          </Providers>
           <Toaster />
         </body>
       </html>

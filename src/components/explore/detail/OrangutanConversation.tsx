@@ -1,7 +1,7 @@
 import { cx } from "class-variance-authority";
 import GradientImage from "../../ui/GradientImage";
 import Container from "../../ui/Container";
-import Button from "../../ui/button";
+import Button from "../../button";
 
 export default function OrangutanConversation() {
   return (

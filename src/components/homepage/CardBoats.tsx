@@ -1,7 +1,7 @@
 import { cx } from "class-variance-authority";
 import React from "react";
 import GradientImage from "../ui/GradientImage";
-import Button from "../ui/button";
+import Button from "../button";
 
 export default function CardBoats({ item }: any) {
   return (

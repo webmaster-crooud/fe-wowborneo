@@ -6,7 +6,7 @@ import { fetchData } from "@/lib/fetchData";
 import Link from "next/link";
 import Star from "@/components/ui/Star";
 import GradientImage from "../ui/GradientImage";
-import Button from "../ui/button";
+import Button from "../button";
 
 interface ServiceCategoryName {
   id: string;

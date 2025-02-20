@@ -1,4 +1,4 @@
-import Button from '@/components/ui/button'
+import Button from '@/components/button'
 import Container from '@/components/ui/Container'
 import Image from 'next/image'
 import React from 'react'

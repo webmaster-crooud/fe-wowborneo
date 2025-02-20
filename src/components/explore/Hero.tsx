@@ -1,14 +1,14 @@
 import { cx } from "class-variance-authority";
 import React from "react";
 import GradientImage from "../ui/GradientImage";
-import Button from "../ui/button";
+import Button from "../button";
 
 export default function Hero() {
   return (
     <div
       className={cx(
-        "w-full landscape:min-lg:h-[120vh] relative",
-        "h-[75vh]",
+        "w-full relative",
+        "h-screen",
         "fullscreen"
       )}
     >

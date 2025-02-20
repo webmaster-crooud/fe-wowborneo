@@ -3,13 +3,13 @@ import React from "react";
 import Container from "./Container";
 import Image from "next/image";
 import GradientImage from "./GradientImage";
-import Button from "./button";
+import Button from "../button";
 
 export default function Footer() {
   return (
     <div className={cx("border border-t-black")}>
-      <div className={cx("w-full flex flex-col lg:flex-row")}>
-        <div className={cx("lg:w-[30%] border-r-black border")}>
+      <div className={cx("w-full flex flex-col lg:flex-row border-b")}>
+        <div className={cx("lg:w-[30%] border-r-black lg:border")}>
           <Container className={cx("flex flex-row py-40-d")}>
             <div className={cx("")}>
               <p>MENU</p>
@@ -19,7 +19,11 @@ export default function Footer() {
             </div>
           </Container>
         </div>
-        <Container className={cx("grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-56-d lg:gap-32-d lg:w-[70%] py-80-d")}>
+        <Container
+          className={cx(
+            "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-56-d lg:gap-32-d lg:w-[70%] py-80-d"
+          )}
+        >
           <div className={cx("w-full")}>
             <p className={cx("font-medium")}>INFO</p>
             <div className={cx("mt-32-d font-semibold flex flex-col gap-16-d")}>
@@ -51,11 +55,25 @@ export default function Footer() {
           </div>
         </Container>
       </div>
-      <div className={cx("w-full flex flex-col py-8 sm:py-16 sm:gap-14 lg:flex-row lg:border lg:py-0 lg:border-t-black")}>
+      <div
+        className={cx(
+          "w-full flex flex-col py-8 sm:py-16 sm:gap-14 lg:flex-row lg:border lg:py-0 lg:border-t-black"
+        )}
+      >
         <div className="flex flex-col sm:flex-row lg:contents">
-          <div className={cx("lg:w-[30%] lg:border-r-black lg:border xl:w-[35%]")}>
-            <Container className={cx("py-1 flex flex-row w-full sm:justify-center lg:py-80-d")}>
-              <div className={cx("w-full flex flex-col items-center justify-center")}>
+          <div
+            className={cx("lg:w-[30%] lg:border-r-black lg:border xl:w-[35%]")}
+          >
+            <Container
+              className={cx(
+                "py-1 flex flex-row w-full sm:justify-center lg:py-80-d"
+              )}
+            >
+              <div
+                className={cx(
+                  "w-full flex flex-col items-center justify-center"
+                )}
+              >
                 <div className={cx("w-[250.14px] h-[35px] relative")}>
                   <Image alt="image" fill src={"/images/icons/stars.png"} />
                 </div>
@@ -66,25 +84,50 @@ export default function Footer() {
             </Container>
           </div>
           <Container
-            className={cx("py-8 w-full sm:py-1 lg:w-[35%] lg:border-r lg:border-r-black lg:py-80-d")}
+            className={cx(
+              "py-8 w-full sm:py-1 lg:w-[35%] lg:border-r lg:border-r-black lg:py-80-d"
+            )}
           >
-            <div className={cx("h-full w-full sm:flex sm:justify-center lg:justify-end")}>
-              <div className={cx("flex flex-row w-full gap-6 sm:justify-center sm:flex-col xl:flex-row")}>
+            <div
+              className={cx(
+                "h-full w-full sm:flex sm:justify-center lg:justify-end"
+              )}
+            >
+              <div
+                className={cx(
+                  "flex flex-row w-full gap-6 sm:justify-center sm:flex-col xl:flex-row"
+                )}
+              >
                 <div className={cx("flex flex-row gap-16-d xl:items-end")}>
                   <div className={cx("flex items-center")}>
-                    <Image width={15} height={15} alt="image" src={"/images/icons/socialMedia/instagram.png"} />
+                    <Image
+                      width={15}
+                      height={15}
+                      alt="image"
+                      src={"/images/icons/socialMedia/instagram.png"}
+                    />
                   </div>
                   <p>Instagram</p>
                 </div>
                 <div className={cx("flex flex-row gap-16-d xl:items-end")}>
                   <div className={cx("flex items-center")}>
-                    <Image width={15} height={15} alt="image" src={"/images/icons/socialMedia/youtube.png"} />
+                    <Image
+                      width={15}
+                      height={15}
+                      alt="image"
+                      src={"/images/icons/socialMedia/youtube.png"}
+                    />
                   </div>
                   <p>Youtube</p>
                 </div>
                 <div className={cx("flex flex-row gap-16-d xl:items-end")}>
                   <div className={cx("flex items-center")}>
-                    <Image width={15} height={15} alt="image" src={"/images/icons/socialMedia/linkedin.png"} />
+                    <Image
+                      width={15}
+                      height={15}
+                      alt="image"
+                      src={"/images/icons/socialMedia/linkedin.png"}
+                    />
                   </div>
                   <p>Linkedin</p>
                 </div>
@@ -94,7 +137,11 @@ export default function Footer() {
         </div>
         <Container className={cx("lg:w-[35%] py-4 lg:py-80-d")}>
           <div className={cx("h-full relative")}>
-            <p className={cx("flex flex-row gap-40-d absolute bottom-0 w-full justify-center xl:justify-start")}>
+            <p
+              className={cx(
+                "flex flex-row gap-40-d absolute bottom-0 w-full justify-center xl:justify-start"
+              )}
+            >
               Copyright © 2024. All rights reserved
             </p>
           </div>

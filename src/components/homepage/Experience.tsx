@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../ui/button'
+import Button from '../button'
 import Container from '../ui/Container'
 import ExperienceCard from './ExperienceCard'
 

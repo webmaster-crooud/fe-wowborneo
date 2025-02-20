@@ -3,7 +3,7 @@
 import { cx } from 'class-variance-authority';
 import Image from 'next/image';
 import React from 'react'
-import Button from '../ui/button';
+import Button from '../button';
 
 const ServiceCard = ({ item, height = "h-[25vw]", isOpen, onClick, colSpan }: { item: { head: string, desc: string, img: string, price: string }, height: string, isOpen: boolean, onClick: () => void, colSpan: string }) => {
     return (

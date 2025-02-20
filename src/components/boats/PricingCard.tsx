@@ -1,7 +1,7 @@
 import { cx } from 'class-variance-authority'
 import Image from 'next/image'
 import React from 'react'
-import Button from '../ui/button'
+import Button from '../button'
 
 const PricingCard = ({ name, price, img }: { name: string, price: string, img: string }) => {
     return (

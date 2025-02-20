@@ -1,6 +1,6 @@
 import { cx } from "class-variance-authority";
 import GradientImage from "../../ui/GradientImage";
-import Button from "../../ui/button";
+import Button from "../../button";
 import Container from "../../ui/Container";
 
 export default function WhyExplore() {
