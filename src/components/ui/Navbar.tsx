@@ -137,7 +137,7 @@ export default function Navbar() {
 						))}
 					</div>
 				</div>
-				<Link href={"/"} className="absolute left-1/2 -translate-x-1/2 w-full mx-auto">
+				<Link href={"/"} className="absolute left-1/2 -translate-x-1/2">
 					<div className={cx("hidden lg:block w-40 h-20 mx-auto")}>
 						<GradientImage src="/images/logo.png" className="object-cover" />
 					</div>
