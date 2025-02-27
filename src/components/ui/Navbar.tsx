@@ -7,8 +7,6 @@ import { usePathname } from "next/navigation";
 import { useGSAP } from "@gsap/react";
 import { toggleNavbar } from "@/stores/navbar";
 import gsap from "gsap";
-import Image from "next/image";
-import ArrowDown from "./ArrowDown";
 import { useLenis } from "@studio-freight/react-lenis";
 import { useQuery } from "@tanstack/react-query";
 import { fetchData } from "@/lib/fetchData";
@@ -117,16 +115,11 @@ export default function Navbar() {
 			href: "/explore",
 			className: "navbar-link",
 		},
-		{
-			label: "Resources",
-			href: "/explore",
-			className: "navbar-link",
-		},
 	];
 
 	return (
 		<nav ref={container} className="h-1 relative top-0 z-40 w-full">
-			<Container className={cx("relative z-20 flex flex-row justify-between items-center landscape:min-lg:py-48-d w-full text-white bg-white/5 backdrop-blur-sm", "h-12 py-2 md:h-16", "navbar")}>
+			<Container className={cx("relative z-20 flex flex-row justify-between items-center landscape:min-lg:py-48-d w-full text-white bg-white/5 backdrop-blur-sm", "h-20 py-2 md:h-36 border-b border-white", "navbar")}>
 				<div className={cx("md:flex flex-row gap-32-d text-18-d items-center", "hidden")}>
 					<div className={cx("flex flex-row gap-5 text-sm lg:gap-3  items-center xl:text-base xl:gap-8")}>
 						<div className={cx("text-secondary cursor-pointer flex gap-8", "navbar-link")} onClick={clickToggleMenu}>
@@ -144,9 +137,9 @@ export default function Navbar() {
 						))}
 					</div>
 				</div>
-				<Link href={"/"} className="absolute left-1/2 -translate-x-1/2">
-					<div className={cx("hidden lg:block w-28 h-12")}>
-						<GradientImage src="/images/logo.png" />
+				<Link href={"/"} className="absolute left-1/2 -translate-x-1/2 w-full mx-auto">
+					<div className={cx("hidden lg:block w-40 h-20 mx-auto")}>
+						<GradientImage src="/images/logo.png" className="object-cover" />
 					</div>
 				</Link>
 
