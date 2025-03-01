@@ -17,7 +17,7 @@ export default function DetailCruise() {
 	return (
 		<>
 			<Hero cover={cruise?.cover || ""} duration={cruise?.duration || ""} subHeading={cruise?.subHeading || ""} title={cruise?.title || ""} key={cruise?.slug} />
-			<Introduction title={cruise?.introduction.title || ""} text={cruise?.introduction.text || ""} destinationText={cruise?.destinationText || ""} />
+			<Introduction title={cruise?.introduction?.title || ""} text={cruise?.introduction?.text || ""} destinationText={cruise?.destinationText || ""} />
 			<DaySection title={cruise?.title || ""} destinations={cruise?.destination || []} />
 			<Adventure title={cruise?.title || ""} highlight={cruise?.highlight || []} />
 			<Package included={cruise?.included || []} price={cruise?.price || ""} information={cruise?.information || []} />

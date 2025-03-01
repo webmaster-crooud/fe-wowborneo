@@ -36,11 +36,11 @@ const DaySection: React.FC<propsDaySection> = ({ title, destinations }) => {
 	return (
 		<Container className="space-y-12 lg:space-y-28">
 			<div className={cx("text-center flex flex-col justify-center items-center gap-8")}>
-				<p className={cx("font-semibold w-full lg:text-base")}>Days 1 - {destinations.length}</p>
+				<p className={cx("font-semibold w-full lg:text-base")}>Days 1 - {destinations?.length}</p>
 				<p className={cx("font-prata w-full text-subtitle")}>{title}</p>
 			</div>
 			<div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
-				{destinations.map((data, index) => (
+				{destinations?.map((data, index) => (
 					<DayCard data={data} key={index} />
 				))}
 			</div>

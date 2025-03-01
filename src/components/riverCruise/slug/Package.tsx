@@ -33,7 +33,7 @@ const Package: React.FC<propsPackage> = ({ price, included, information }) => {
 				</Container>
 				<Container className="flex flex-col gap-6 py-2 xl:px-72">
 					{included.map((include, index) => (
-						<DetailItem key={index} desc={include.description} title={include.title} />
+						<DetailItem key={index} desc={include.description || ""} title={include.title || ""} />
 					))}
 				</Container>
 			</div>
@@ -46,7 +46,7 @@ const Package: React.FC<propsPackage> = ({ price, included, information }) => {
 				</Container>
 				<Container className="flex flex-col gap-6 py-2 xl:px-72">
 					{information.map((information, index) => (
-						<DetailItem key={index} desc={information.text} title={information.title} />
+						<DetailItem key={index} desc={information.text || ""} title={information.title || ""} />
 					))}
 					<Button className="text-18-d hover:shadow-lg hover:scale-105 transition w-full mx-auto">Book the Ultimate Adventure</Button>
 				</Container>
