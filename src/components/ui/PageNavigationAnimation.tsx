@@ -15,8 +15,8 @@ const heroImages: { [key: string]: string } = {
 	"/explore/detail": "/images/nature/river.png",
 	"/boats": "/images/nature/river7.png",
 	"/boats/detail": "/images/nature/river2.png",
-	"/river-cruise": "/images/nature/river3.png",
-	"/river-cruise/detail": "/images/nature/sea.png",
+	"/cruise": "/images/nature/river3.png",
+	// "/cruise/:slug": "/images/nature/sea.png",
 };
 
 const PageNavigationAnimation = () => {

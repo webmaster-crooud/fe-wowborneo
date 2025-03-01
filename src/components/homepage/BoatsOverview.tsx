@@ -28,7 +28,7 @@ export default function BoatsOverview() {
 									<div className="flex items-center gap-6">
 										<p>SWIPE</p>
 										<div className="w-96 bg-white h-1 rounded-full">
-											<div className={`h-full bg-orange-borneo rounded-full transition-all duration-300`} style={{ width: `${(index + 1) * 20}%` }}></div>
+											<div className={`h-full bg-orange-borneo rounded-full transition-all duration-300`} style={{ width: `${(index + 1) * (100 / sliderImages.length)}%` }}></div>
 										</div>
 										<p>{">>"}</p>
 									</div>

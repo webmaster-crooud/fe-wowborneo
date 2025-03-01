@@ -9,7 +9,7 @@ export default function Footer() {
 	return (
 		<div className={cx("border border-t-black")}>
 			<div className={cx("w-full flex flex-col lg:flex-row border-b")}>
-				<div className={cx("lg:w-[30%] border-r-black lg:border")}>
+				<div className={cx("lg:w-[29.65%] border-r-black lg:border")}>
 					<Container className={cx("flex flex-row py-40-d")}>
 						<div className={cx("")}>
 							<p>MENU</p>

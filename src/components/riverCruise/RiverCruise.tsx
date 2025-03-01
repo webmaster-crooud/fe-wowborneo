@@ -12,33 +12,36 @@ import Divider from "../ui/Divider";
 import Combination from "./Combination";
 import MoreThan from "./MoreThan";
 import WhyChoose from "./WhyChoose";
+import ReadyToChoose from "./ReadyToChoose";
 
 export default function Home() {
-  const state = toggleNavbar();
+	const state = toggleNavbar();
 
-  const navbarColors = [0, 1];
+	const navbarColors = [0, 1];
 
-  const updateNavbarColor = (color: number) => {
-    state.updateNavbarColorNew(color);
-  };
+	const updateNavbarColor = (color: number) => {
+		state.updateNavbarColorNew(color);
+	};
 
-  useVariantsOnScroll(navbarColors, ".fullscreen", updateNavbarColor);
+	useVariantsOnScroll(navbarColors, ".fullscreen", updateNavbarColor);
 
-  useEffect(() => {
-    state.updateNavbarColorNew(0);
-  }, []);
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <WelcomeToBorneo />
-      <Explore />
-      <Divider />
-      <Combination />
-      <Divider />
-      <MoreThan />
-      <WhyChoose />
-      <Footer />
-    </>
-  );
+	useEffect(() => {
+		state.updateNavbarColorNew(0);
+	}, []);
+	return (
+		<>
+			<Navbar />
+			<Hero />
+			<WelcomeToBorneo />
+			<Explore />
+			<Divider />
+			<Combination />
+			<Divider />
+			<MoreThan />
+			<WhyChoose />
+			<Divider />
+			<ReadyToChoose />
+			<Footer />
+		</>
+	);
 }
