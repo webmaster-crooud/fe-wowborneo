@@ -1,9 +1,12 @@
+"use client";
 import React from "react";
 import Button from "../button";
 import Container from "../ui/Container";
 import ExperienceCard from "./ExperienceCard";
+import { useRouter } from "next/navigation";
 
 const Experience = () => {
+	const router = useRouter();
 	const data = [
 		{
 			img: "/images/people/family5.png",
@@ -31,7 +34,9 @@ const Experience = () => {
 				<span className="text-sm font-bold tracking-wider w-full">EXPLORE</span>
 				<h2 className="font-prata w-full text-subtitle leading-[3rem]">Experiences Borneo</h2>
 				<p className="text-description text-[#372817]">From close encounters with orangutans to exploring the cultural heritage of the Dayak people, our experiences are crafted to inspire, educate, and connect you to the heart of Borneo.</p>
-				<Button className="text-16-d hover:shadow-lg hover:scale-105 transition w-fit">See All Experiences</Button>
+				<Button onClick={() => router.push("/explore")} className="text-16-d hover:shadow-lg hover:scale-105 transition w-fit">
+					See All Experiences
+				</Button>
 			</div>
 			<div className="flex flex-col gap-8">
 				{data.map((item) => (

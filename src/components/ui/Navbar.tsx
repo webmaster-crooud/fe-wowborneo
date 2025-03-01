@@ -102,7 +102,7 @@ export default function Navbar() {
 		},
 		{
 			label: "River Cruise",
-			href: "/river-cruise",
+			href: "/cruise",
 			className: "navbar-link",
 		},
 		{
