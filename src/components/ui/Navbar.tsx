@@ -45,13 +45,6 @@ export default function Navbar() {
 		});
 	}, [toggleMenu]);
 
-	const menuItems = [
-		{ label: "Message", href: "/our-services/message" },
-		{ label: "Beauty", href: "/our-services/beauty" },
-		{ label: "Woman Treatments", href: "/our-services/woman-treatments" },
-		{ label: "Spa-Packages", href: "/our-services/spa-packages" },
-	];
-
 	useGSAP(() => {
 		gsap.to(".navbar-link", {
 			ease: "power1.inOut",
@@ -89,10 +82,10 @@ export default function Navbar() {
 		}
 	});
 
-	const { data, error, isLoading } = useQuery<ServiceCategoryNameResponse>({
-		queryKey: ["navbarOurServices"],
-		queryFn: () => fetchData("service-category/show-all"),
-	});
+	// const { data, error, isLoading } = useQuery<ServiceCategoryNameResponse>({
+	// 	queryKey: ["navbarOurServices"],
+	// 	queryFn: () => fetchData("service-category/show-all"),
+	// });
 
 	const navbarLinks = [
 		{
@@ -118,8 +111,8 @@ export default function Navbar() {
 	];
 
 	return (
-		<nav ref={container} className="h-1 relative top-0 z-40 w-full">
-			<Container className={cx("relative z-20 flex flex-row justify-between items-center landscape:min-lg:py-48-d w-full text-white bg-white/5 backdrop-blur-sm", "h-20 py-2 md:h-28 border-b border-white", "navbar")}>
+		<nav ref={container} className="h-0 relative top-0 z-40 w-full">
+			<Container className={cx("relative z-20 flex flex-row justify-between items-center landscape:min-lg:py-48-d w-full text-white bg-black/20", "h-20 py-2 md:h-28 border-b border-white", "navbar")}>
 				<div className={cx("md:flex flex-row gap-32-d text-18-d items-center", "hidden")}>
 					<div className={cx("flex flex-row gap-5 text-sm lg:gap-3  items-center xl:text-base xl:gap-8")}>
 						<div className={cx("text-secondary cursor-pointer flex gap-8", "navbar-link")} onClick={clickToggleMenu}>

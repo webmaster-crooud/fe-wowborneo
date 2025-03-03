@@ -1,23 +1,46 @@
-import Button from '@/components/button'
-import Container from '@/components/ui/Container'
-import Image from 'next/image'
-import React from 'react'
+import Container from "@/components/ui/Container";
+import GradientImage from "@/components/ui/GradientImage";
+import { IExperience } from "@/types/boat";
+import { cx } from "class-variance-authority";
+import React from "react";
 
-const Experience = () => {
-    return (
-        <Container className='space-y-6 pt-1'>
-            <div>
-                <Image src={"/images/boats/boat-deck.png"} alt='ship image' width={1000} height={1000} className='w-full h-full' />
-            </div>
-            <div className='flex w-full flex-col gap-6 sm:text-center lg:items-center'>
-                <h6 className='text-subtitle font-semibold'>Experience the Rahai’i Pangun Difference</h6>
-                <p className='text-description lg:w-[70%]'>At Wow Borneo, we believe that the journey is just as important as the destination. With Rahai’i Pangun, you’ll enjoy not only the sights but the sounds and stories of Borneo’s jungle. Our English-speaking guides and dedicated crew are here to make sure every moment of your adventure is as magical as the surroundings. From jungle sightings to cultural encounters, this journey promises memories that will stay with you long after the cruise ends.</p>
-                <Button className="text-18-d hover:shadow-lg hover:scale-105 transition w-fit mx-auto">
-                    Start Your Journey with Rahai’i Pangun
-                </Button>
-            </div>
-        </Container>
-    )
+type prospExperience = {
+	data: IExperience[];
+};
+
+export default function Experience({ data }: prospExperience) {
+	return (
+		<Container>
+			<div className="w-full text-center pb-20">
+				<p className={cx("uppercase w-full font-bold")}>Onboard Experience</p>
+			</div>
+			<div className="space-y-24">
+				<div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-y-20">
+					{data.map(({ cover, title, description }, i) =>
+						i % 2 === 0 ? (
+							<React.Fragment key={i}>
+								<div className="w-full h-full rounded aspect-video">
+									<GradientImage fitVariant="cover" className="rounded-lg" src={cover || "/"} />
+								</div>
+								<div className="space-y-3 lg:space-y-10">
+									<p className={cx("font-prata text-subtitle")}>{title}</p>
+									<p className={cx("font-open-sans text-description font-normal leading-[28px]")}>{description}</p>
+								</div>
+							</React.Fragment>
+						) : (
+							<React.Fragment key={i}>
+								<div className="space-y-3 lg:space-y-10">
+									<p className={cx("font-prata text-subtitle")}>{title}</p>
+									<p className={cx("font-open-sans text-description font-normal leading-[28px]")}>{description}</p>
+								</div>
+								<div className="w-full h-full rounded aspect-video">
+									<GradientImage fitVariant="cover" className="rounded-lg" src={cover || "/"} />
+								</div>
+							</React.Fragment>
+						)
+					)}
+				</div>
+			</div>
+		</Container>
+	);
 }
-
-export default Experience

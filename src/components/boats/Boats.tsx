@@ -6,43 +6,41 @@ import useVariantsOnScroll from "@/hooks/useVariantsOnScroll";
 import Navbar from "../ui/Navbar";
 import Footer from "../ui/Footer";
 import Hero from "./Hero";
-import RangaiPangun from "./RahaiPangun";
-import Kumai from "./Kumai";
-import Sekonyer from "./Sekonyer";
 import Divider from "../ui/Divider";
-import TheSpiritOfKalimantan from "./TheSpiritOfKalimantan";
 import ExploreBoats from "./ExploreBoats";
 import OurBenefit from "./OurBenefit";
 import BookYourAdventure from "./BookYourAdventure";
+import BoatList from "./BoatList";
+import { getAllBoats } from "@/utils/BoatHelper";
+import { BOAT } from "@/constants/boat";
 
 export default function Boats() {
-  const state = toggleNavbar();
+	const state = toggleNavbar();
 
-  const navbarColors = [0, 1];
+	const navbarColors = [0, 1];
 
-  const updateNavbarColor = (color: number) => {
-    state.updateNavbarColorNew(color);
-  };
+	const updateNavbarColor = (color: number) => {
+		state.updateNavbarColorNew(color);
+	};
 
-  useVariantsOnScroll(navbarColors, ".fullscreen", updateNavbarColor);
+	useVariantsOnScroll(navbarColors, ".fullscreen", updateNavbarColor);
 
-  useEffect(() => {
-    state.updateNavbarColorNew(0);
-  }, []);
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <RangaiPangun />
-      <Kumai />
-      <Sekonyer />
-      <TheSpiritOfKalimantan />
-      <Divider />
-      <ExploreBoats />
-      <OurBenefit />
-      <Divider />
-      <BookYourAdventure />
-      <Footer />
-    </>
-  );
+	useEffect(() => {
+		state.updateNavbarColorNew(0);
+	}, []);
+	return (
+		<>
+			<Navbar />
+			<Hero />
+			{BOAT.map((boat, i) => (
+				<BoatList key={i} name={boat.name} slug={boat.slug} cover={boat.cover} description={boat.description} facilities={boat.facilities} index={i} />
+			))}
+			<Divider />
+			<ExploreBoats />
+			<OurBenefit />
+			<Divider />
+			<BookYourAdventure />
+			<Footer />
+		</>
+	);
 }

@@ -11,9 +11,7 @@ import { useParams } from "next/navigation";
 
 export default function DetailCruise() {
 	const { slug } = useParams();
-	console.log(slug);
 	const cruise = getCruiseBySlug(slug as string);
-	console.log(cruise);
 	return (
 		<>
 			<Hero cover={cruise?.cover || ""} duration={cruise?.duration || ""} subHeading={cruise?.subHeading || ""} title={cruise?.title || ""} key={cruise?.slug} />

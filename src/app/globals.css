@@ -3,280 +3,280 @@
 @tailwind utilities;
 
 :root {
-  --bw: 1920;
-  --p-lh: 1.2;
+	--bw: 1920;
+	--p-lh: 1.2;
 
-  /* font-size */
-  --p-8: calc((8 / var(--bw)) * 100 * 1vw);
-  --p-16: calc((16 / var(--bw)) * 100 * 1vw);
-  --p-18: calc((18 / var(--bw)) * 100 * 1vw);
-  --p-20: calc((20 / var(--bw)) * 100 * 1vw);
-  --p-24: calc((24 / var(--bw)) * 100 * 1vw);
-  --p-32: calc((32 / var(--bw)) * 100 * 1vw);
-  --p-40: calc((40 / var(--bw)) * 100 * 1vw);
-  --p-48: calc((48 / var(--bw)) * 100 * 1vw);
-  --p-56: calc((56 / var(--bw)) * 100 * 1vw);
-  --p-64: calc((64 / var(--bw)) * 100 * 1vw);
-  --p-72: calc((72 / var(--bw)) * 100 * 1vw);
-  --p-80: calc((80 / var(--bw)) * 100 * 1vw);
-  --p-88: calc((88 / var(--bw)) * 100 * 1vw);
-  --p-96: calc((96 / var(--bw)) * 100 * 1vw);
-  --p-104: calc((104 / var(--bw)) * 100 * 1vw);
-  --p-112: calc((112 / var(--bw)) * 100 * 1vw);
-  --p-120: calc((120 / var(--bw)) * 100 * 1vw);
-  --p-128: calc((128 / var(--bw)) * 100 * 1vw);
-  --p-136: calc((136 / var(--bw)) * 100 * 1vw);
-  --p-144: calc((144 / var(--bw)) * 100 * 1vw);
-  --p-152: calc((152 / var(--bw)) * 100 * 1vw);
-  --p-160: calc((160 / var(--bw)) * 100 * 1vw);
-  --p-168: calc((168 / var(--bw)) * 100 * 1vw);
-  --p-176: calc((176 / var(--bw)) * 100 * 1vw);
-  --p-184: calc((184 / var(--bw)) * 100 * 1vw);
-  --p-192: calc((192 / var(--bw)) * 100 * 1vw);
-  --p-200: calc((200 / var(--bw)) * 100 * 1vw);
-  --p-208: calc((208 / var(--bw)) * 100 * 1vw);
-  --p-216: calc((216 / var(--bw)) * 100 * 1vw);
-  --p-224: calc((224 / var(--bw)) * 100 * 1vw);
-  --p-232: calc((232 / var(--bw)) * 100 * 1vw);
-  --p-240: calc((240 / var(--bw)) * 100 * 1vw);
-  --p-248: calc((248 / var(--bw)) * 100 * 1vw);
-  --p-256: calc((256 / var(--bw)) * 100 * 1vw);
-  --p-264: calc((264 / var(--bw)) * 100 * 1vw);
-  --p-272: calc((272 / var(--bw)) * 100 * 1vw);
-  --p-280: calc((280 / var(--bw)) * 100 * 1vw);
-  --p-288: calc((288 / var(--bw)) * 100 * 1vw);
-  --p-296: calc((296 / var(--bw)) * 100 * 1vw);
-  --p-304: calc((304 / var(--bw)) * 100 * 1vw);
-  --p-312: calc((312 / var(--bw)) * 100 * 1vw);
-  --p-320: calc((320 / var(--bw)) * 100 * 1vw);
+	/* font-size */
+	--p-8: calc((8 / var(--bw)) * 100 * 1vw);
+	--p-16: calc((16 / var(--bw)) * 100 * 1vw);
+	--p-18: calc((18 / var(--bw)) * 100 * 1vw);
+	--p-20: calc((20 / var(--bw)) * 100 * 1vw);
+	--p-24: calc((24 / var(--bw)) * 100 * 1vw);
+	--p-32: calc((32 / var(--bw)) * 100 * 1vw);
+	--p-40: calc((40 / var(--bw)) * 100 * 1vw);
+	--p-48: calc((48 / var(--bw)) * 100 * 1vw);
+	--p-56: calc((56 / var(--bw)) * 100 * 1vw);
+	--p-64: calc((64 / var(--bw)) * 100 * 1vw);
+	--p-72: calc((72 / var(--bw)) * 100 * 1vw);
+	--p-80: calc((80 / var(--bw)) * 100 * 1vw);
+	--p-88: calc((88 / var(--bw)) * 100 * 1vw);
+	--p-96: calc((96 / var(--bw)) * 100 * 1vw);
+	--p-104: calc((104 / var(--bw)) * 100 * 1vw);
+	--p-112: calc((112 / var(--bw)) * 100 * 1vw);
+	--p-120: calc((120 / var(--bw)) * 100 * 1vw);
+	--p-128: calc((128 / var(--bw)) * 100 * 1vw);
+	--p-136: calc((136 / var(--bw)) * 100 * 1vw);
+	--p-144: calc((144 / var(--bw)) * 100 * 1vw);
+	--p-152: calc((152 / var(--bw)) * 100 * 1vw);
+	--p-160: calc((160 / var(--bw)) * 100 * 1vw);
+	--p-168: calc((168 / var(--bw)) * 100 * 1vw);
+	--p-176: calc((176 / var(--bw)) * 100 * 1vw);
+	--p-184: calc((184 / var(--bw)) * 100 * 1vw);
+	--p-192: calc((192 / var(--bw)) * 100 * 1vw);
+	--p-200: calc((200 / var(--bw)) * 100 * 1vw);
+	--p-208: calc((208 / var(--bw)) * 100 * 1vw);
+	--p-216: calc((216 / var(--bw)) * 100 * 1vw);
+	--p-224: calc((224 / var(--bw)) * 100 * 1vw);
+	--p-232: calc((232 / var(--bw)) * 100 * 1vw);
+	--p-240: calc((240 / var(--bw)) * 100 * 1vw);
+	--p-248: calc((248 / var(--bw)) * 100 * 1vw);
+	--p-256: calc((256 / var(--bw)) * 100 * 1vw);
+	--p-264: calc((264 / var(--bw)) * 100 * 1vw);
+	--p-272: calc((272 / var(--bw)) * 100 * 1vw);
+	--p-280: calc((280 / var(--bw)) * 100 * 1vw);
+	--p-288: calc((288 / var(--bw)) * 100 * 1vw);
+	--p-296: calc((296 / var(--bw)) * 100 * 1vw);
+	--p-304: calc((304 / var(--bw)) * 100 * 1vw);
+	--p-312: calc((312 / var(--bw)) * 100 * 1vw);
+	--p-320: calc((320 / var(--bw)) * 100 * 1vw);
 }
 
 @media (max-width: 640px) {
-  :root {
-    --bw: 430;
-  }
+	:root {
+		--bw: 430;
+	}
 }
 
 @media (min-width: 640px) and (max-width: 1024px) and (orientation: portrait) {
-  :root {
-    --bw: 832;
-  }
+	:root {
+		--bw: 832;
+	}
 }
 
 @media (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
-  :root {
-    --bw: 832;
-  }
+	:root {
+		--bw: 832;
+	}
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) and (orientation: landscape) {
-  :root {
-    --bw: 1152;
-  }
+	:root {
+		--bw: 1152;
+	}
 }
 
 /* Apply a custom font to the body */
 body {
-  position: relative;
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	overflow-x: hidden;
 }
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-    --radius: 0.75rem;
-  }
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 222.2 84% 4.9%;
+		--card: 0 0% 100%;
+		--card-foreground: 222.2 84% 4.9%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 222.2 84% 4.9%;
+		--primary: 222.2 47.4% 11.2%;
+		--primary-foreground: 210 40% 98%;
+		--secondary: 210 40% 96.1%;
+		--secondary-foreground: 222.2 47.4% 11.2%;
+		--muted: 210 40% 96.1%;
+		--muted-foreground: 215.4 16.3% 46.9%;
+		--accent: 210 40% 96.1%;
+		--accent-foreground: 222.2 47.4% 11.2%;
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 210 40% 98%;
+		--border: 214.3 31.8% 91.4%;
+		--input: 214.3 31.8% 91.4%;
+		--ring: 222.2 84% 4.9%;
+		--radius: 0.75rem;
+	}
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9;
-  }
+	.dark {
+		--background: 222.2 84% 4.9%;
+		--foreground: 210 40% 98%;
+		--card: 222.2 84% 4.9%;
+		--card-foreground: 210 40% 98%;
+		--popover: 222.2 84% 4.9%;
+		--popover-foreground: 210 40% 98%;
+		--primary: 210 40% 98%;
+		--primary-foreground: 222.2 47.4% 11.2%;
+		--secondary: 217.2 32.6% 17.5%;
+		--secondary-foreground: 210 40% 98%;
+		--muted: 217.2 32.6% 17.5%;
+		--muted-foreground: 215 20.2% 65.1%;
+		--accent: 217.2 32.6% 17.5%;
+		--accent-foreground: 210 40% 98%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 210 40% 98%;
+		--border: 217.2 32.6% 17.5%;
+		--input: 217.2 32.6% 17.5%;
+		--ring: 212.7 26.8% 83.9;
+	}
 }
 
 .gradient-white {
-  background: linear-gradient(90deg, #fffdfc 0%, #eee6df 50%, #fffdfc 100%);
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.5s ease-in-out infinite;
+	background: linear-gradient(90deg, #fffdfc 0%, #eee6df 50%, #fffdfc 100%);
+	background-size: 200% 100%;
+	animation: skeleton-loading 1.5s ease-in-out infinite;
 }
 
 @keyframes skeleton-loading {
-  0% {
-    background-position: 100% 0;
-  }
-  100% {
-    background-position: -100% 0;
-  }
+	0% {
+		background-position: 100% 0;
+	}
+	100% {
+		background-position: -100% 0;
+	}
 }
 
 @layer components {
-  .text-description {
-    @apply text-sm md:text-base lg:text-lg
-  }
+	.text-description {
+		@apply text-sm md:text-base lg:text-lg;
+	}
 
-  .text-title {
-    @apply text-3xl md:text-4xl lg:text-5xl xl:text-7xl
-  }
+	.text-title {
+		@apply text-3xl md:text-4xl lg:text-5xl xl:text-7xl;
+	}
 
-  .text-subtitle {
-    @apply font-medium text-xl md:text-2xl lg:text-3xl xl:text-5xl
-  }
+	.text-subtitle {
+		@apply font-medium text-xl md:text-2xl lg:text-3xl xl:text-5xl;
+	}
 }
 
 /* Extend utilities with custom classes */
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.text-balance {
+		text-wrap: balance;
+	}
 }
 
 .tiptap p.is-editor-empty:first-child::before {
-  color: #adb5bd;
-  content: attr(data-placeholder);
-  float: left;
-  height: 0;
-  pointer-events: none;
+	color: #adb5bd;
+	content: attr(data-placeholder);
+	float: left;
+	height: 0;
+	pointer-events: none;
 }
 
 .prose {
-  /* Mengatur line-height agar teks lebih rapat */
-  line-height: 1.2; /* Menyesuaikan jarak antar baris lebih rapat */
+	/* Mengatur line-height agar teks lebih rapat */
+	line-height: 1.2; /* Menyesuaikan jarak antar baris lebih rapat */
 
-  /* Mengatur margin dan padding untuk mengurangi jarak antar elemen */
-  margin: 0;
-  padding: 0;
+	/* Mengatur margin dan padding untuk mengurangi jarak antar elemen */
+	margin: 0;
+	padding: 0;
 
-  /* Mengatur margin antar paragraf lebih rapat */
-  p {
-    margin-top: 0.125rem; /* Jarak atas antar paragraf */
-    margin-bottom: 0.125rem; /* Jarak bawah antar paragraf */
-  }
+	/* Mengatur margin antar paragraf lebih rapat */
+	p {
+		margin-top: 0.125rem; /* Jarak atas antar paragraf */
+		margin-bottom: 0.125rem; /* Jarak bawah antar paragraf */
+	}
 
-  /* Mengatur margin untuk daftar */
-  ul,
-  ol {
-    margin-top: 0.25rem; /* Jarak atas antar item daftar */
-    margin-bottom: 0.25rem; /* Jarak bawah antar item daftar */
-  }
+	/* Mengatur margin untuk daftar */
+	ul,
+	ol {
+		margin-top: 0.25rem; /* Jarak atas antar item daftar */
+		margin-bottom: 0.25rem; /* Jarak bawah antar item daftar */
+	}
 
-  /* Mengatur margin untuk blockquote */
-  blockquote {
-    margin-top: 0.5rem; /* Jarak atas blockquote */
-    margin-bottom: 0.5rem; /* Jarak bawah blockquote */
-    padding-left: 0.5rem; /* Memberi padding di kiri blockquote */
-    border-left: 2px solid #ccc; /* Memberi garis di sebelah kiri blockquote */
-  }
+	/* Mengatur margin untuk blockquote */
+	blockquote {
+		margin-top: 0.5rem; /* Jarak atas blockquote */
+		margin-bottom: 0.5rem; /* Jarak bawah blockquote */
+		padding-left: 0.5rem; /* Memberi padding di kiri blockquote */
+		border-left: 2px solid #ccc; /* Memberi garis di sebelah kiri blockquote */
+	}
 
-  /* Mengatur margin untuk heading */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 0.25rem; /* Jarak atas heading */
-    margin-bottom: 0.25rem; /* Jarak bawah heading */
-  }
+	/* Mengatur margin untuk heading */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 0.25rem; /* Jarak atas heading */
+		margin-bottom: 0.25rem; /* Jarak bawah heading */
+	}
 
-  /* Mengatur margin dan padding untuk gambar */
-  img {
-    margin-top: 0.25rem; /* Jarak atas untuk gambar */
-    margin-bottom: 0.25rem; /* Jarak bawah untuk gambar */
-    max-width: 100%; /* Agar gambar responsif */
-    height: auto; /* Menjaga proporsi gambar */
-  }
+	/* Mengatur margin dan padding untuk gambar */
+	img {
+		margin-top: 0.25rem; /* Jarak atas untuk gambar */
+		margin-bottom: 0.25rem; /* Jarak bawah untuk gambar */
+		max-width: 100%; /* Agar gambar responsif */
+		height: auto; /* Menjaga proporsi gambar */
+	}
 
-  /* Mengatur margin untuk tabel */
-  table {
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
-    border-collapse: collapse;
-  }
+	/* Mengatur margin untuk tabel */
+	table {
+		margin-top: 0.25rem;
+		margin-bottom: 0.25rem;
+		border-collapse: collapse;
+	}
 
-  /* Mengatur padding pada sel tabel */
-  th,
-  td {
-    padding: 0.25rem;
-    border: 1px solid #ddd;
-  }
+	/* Mengatur padding pada sel tabel */
+	th,
+	td {
+		padding: 0.25rem;
+		border: 1px solid #ddd;
+	}
 
-  /* Mengatur margin untuk link */
-  a {
-    color: #1d4ed8; /* Warna biru untuk tautan */
-    text-decoration: underline; /* Menambahkan garis bawah */
-  }
+	/* Mengatur margin untuk link */
+	a {
+		color: #1d4ed8; /* Warna biru untuk tautan */
+		text-decoration: underline; /* Menambahkan garis bawah */
+	}
 
-  /* Mengatur gaya untuk elemen lainnya */
-  pre {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    background-color: #f7f7f7;
-    border-radius: 4px;
-    overflow-x: auto;
-  }
+	/* Mengatur gaya untuk elemen lainnya */
+	pre {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+		padding: 0.5rem;
+		background-color: #f7f7f7;
+		border-radius: 4px;
+		overflow-x: auto;
+	}
 
-  code {
-    font-size: 0.75rem; /* Mengatur ukuran font untuk kode lebih kecil */
-    padding: 0.125rem;
-    background-color: #f4f4f5;
-    border-radius: 3px;
-  }
+	code {
+		font-size: 0.75rem; /* Mengatur ukuran font untuk kode lebih kecil */
+		padding: 0.125rem;
+		background-color: #f4f4f5;
+		border-radius: 3px;
+	}
 }
 /* Add global styles in the base layer */
 @layer base {
-  :root {
-    --radius: 0.5rem;
-  }
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply antialiased transition bg-background text-foreground;
-  }
+	:root {
+		--radius: 0.5rem;
+	}
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply antialiased transition bg-background text-foreground;
+	}
 
-  /* Global styles for the document */
-  body {
-    font-size: var(--p-18);
-    line-height: var(--p-lh);
-    position: relative;
-    color: #372817;
-    overflow-x: hidden;
-    background-color: #faeee6;
-  }
+	/* Global styles for the document */
+	body {
+		font-size: var(--p-18);
+		line-height: var(--p-lh);
+		position: relative;
+		color: #372817;
+		overflow-x: hidden;
+		background-color: #faeee6;
+	}
 }

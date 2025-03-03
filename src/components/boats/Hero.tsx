@@ -3,6 +3,9 @@ import React from "react";
 import GradientImage from "../ui/GradientImage";
 import Button from "../button";
 
+type propsHero = {
+	title: string;
+};
 export default function Hero() {
 	return (
 		<div className={cx("w-full relative", "h-screen", "fullscreen")}>

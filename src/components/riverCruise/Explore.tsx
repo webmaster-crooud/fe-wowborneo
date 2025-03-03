@@ -33,7 +33,6 @@ const CRUISE_PACKAGES: CruisePackage[] = [
 		description: "Set sail on the tranquil waters of Katingan River, where the Sebangau National Park unveils a world of rich biodiversity. Encounter rare species, explore peat-swamp forests, and connect with the heart of Kalimantan.",
 		cruises: cruiseData.filter((cruise) => cruise.slug === "sebangau-safari-borneo" || cruise.slug === "katingan-river-sebangau-wilderness-journey" || cruise.slug === "hidden-rivers-sebangau-katingan"),
 	},
-	// Tambahkan package lainnya sesuai kebutuhan
 ];
 
 const CruisePackageSection = ({ packageData }: { packageData: CruisePackage }) => {

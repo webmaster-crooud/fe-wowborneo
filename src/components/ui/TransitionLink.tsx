@@ -27,7 +27,7 @@ const TransitionLink = ({ href, children, opacity = true, className = "" }: Tran
 	};
 
 	return (
-		<div className={cx(opacity ? (pathname === href ? "underline" : "") : "underline", "cursor-pointer", className)} onClick={handleClick}>
+		<div className={cx(opacity ? (pathname === href ? "underline underline-offset-4" : "") : "underline underline-offset-4", "cursor-pointer", className)} onClick={handleClick}>
 			{children}
 		</div>
 	);

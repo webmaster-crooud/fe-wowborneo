@@ -11,9 +11,7 @@ import { useParams } from "next/navigation";
 
 export default function DetailTour() {
 	const { slug } = useParams();
-	console.log(slug);
 	const tour = getTourBySlug(slug as string);
-	console.log(tour);
 	return (
 		<>
 			<Hero cover={tour?.cover || ""} duration={tour?.duration || ""} subHeading={tour?.subHeading || ""} title={tour?.title || ""} key={tour?.slug} />
