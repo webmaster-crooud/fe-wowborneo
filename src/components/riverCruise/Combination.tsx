@@ -49,7 +49,7 @@ export default function Combination() {
 	];
 	return (
 		<Container>
-			<div className="space-y-4 lg:flex lg:flex-col lg:text-center lg:items-end lg:gap-6 lg:w-7/12 lg:mx-auto">
+			<div className="space-y-4 lg:flex lg:flex-col lg:text-center lg:items-end lg:gap-6 lg:w-7/12 lg:mx-auto" id="tours">
 				<div className="space-y-4 w-full">
 					<p className={cx("uppercase font-bold tracking-widest mb-10 w-full")}>Combination Tours</p>
 					<p className={cx("font-prata text-subtitle lg:w-10/12 lg:mx-auto")}>Discover Our Combination Tours</p>

@@ -70,7 +70,7 @@ export default function FeaturedCruises() {
 			</ImageSlider>
 			{/* Section 3 */}
 			<Container className={cx("mt-248-d py-2")}>
-				<div className={cx("w-full flex flex-col gap-24-d justify-center items-center lg:text-center")}>
+				<div className={cx("w-full flex flex-col gap-24-d justify-center items-center lg:text-center")} id="whyChooses">
 					<p className={cx("uppercase font-medium w-full")}>TOC HERE</p>
 					<p className={cx("font-prata text-subtitle w-full lg:w-[50%]")}>Why Choose Wow Borneo?</p>
 					<p className={cx("text-description lg:w-[50%]")}>Choose from our carefully crafted cruises, each offering a unique experience of Borneo’s natural beauty and cultural treasures.</p>

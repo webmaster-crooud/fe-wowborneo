@@ -4,6 +4,8 @@ import Container from "./Container";
 import Image from "next/image";
 import GradientImage from "./GradientImage";
 import Button from "../button";
+import Link from "next/link";
+import { cruiseData } from "@/constants/cruise";
 
 export default function Footer() {
 	return (
@@ -17,34 +19,35 @@ export default function Footer() {
 						</div>
 					</Container>
 				</div>
-				<Container className={cx("grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-56-d lg:gap-32-d lg:w-[70%] py-80-d")}>
+				<Container className={cx("grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-56-d lg:gap-32-d lg:w-full py-80-d")}>
 					<div className={cx("w-full")}>
-						<p className={cx("font-medium")}>INFO</p>
-						<div className={cx("mt-32-d font-semibold flex flex-col gap-16-d")}>
-							<p>Our Story</p>
-							<p>Our Mission Stament</p>
-							<p>Sustainability Statement</p>
-							<p>Why Wowborneo</p>
-							<p>Privacy Policy</p>
-							<p>Term and Condition</p>
-						</div>
-					</div>
-					<div className={cx("w-full")}>
-						<p className={cx("font-medium")}>PLAN YOUR CRUISE</p>
-						<div className={cx("mt-32-d font-semibold flex flex-col gap-16-d")}>
-							<p>Orangutan & Daya Village</p>
-							<p>Orangutan Tours in Tanjung Puting</p>
-							<p>Katingan River & Sebangau National Park</p>
-							<p>Combination Tours Cruise & Tours</p>
-						</div>
-					</div>
-					<div className={cx("w-full lg:ml-80-d")}>
 						<p className={cx("font-medium")}>LINKS</p>
 						<div className={cx("mt-32-d font-semibold flex flex-col gap-16-d")}>
 							<p>Awards</p>
 							<p>Media Galery</p>
 							<p>Philosophy</p>
 							<p>FAQ's</p>
+						</div>
+					</div>
+
+					<div className={cx("w-full")}>
+						<p className={cx("font-medium")}>INFO</p>
+						<div className={cx("mt-32-d font-semibold flex flex-col gap-16-d")}>
+							<Link href={"/our-story"}>Our Story</Link>
+							<Link href={"/our-mission"}>Our Mission Stament</Link>
+							<Link href={"/"}>Sustainability Statement</Link>
+							<Link href={"/#whyChooses"}>Why Wowborneo</Link>
+							<p>Privacy Policy</p>
+							<p>Term and Condition</p>
+						</div>
+					</div>
+
+					<div className={cx("w-full col-span-1 sm:col-span-2")}>
+						<p className={cx("font-medium")}>PLAN YOUR CRUISE</p>
+						<div className={cx("mt-32-d font-semibold flex flex-col gap-16-d")}>
+							{cruiseData.map((cruise, i) => (
+								<Link href={`/cruise/${cruise.slug}`}>{cruise.title}</Link>
+							))}
 						</div>
 					</div>
 				</Container>
