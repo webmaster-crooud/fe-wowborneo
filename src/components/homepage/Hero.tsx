@@ -15,7 +15,7 @@ export default function Hero() {
 				<p className={cx("text-sm text-center font-semibold md:text-base uppercase lg:text-lg tracking-widest")}>Borneo river cruise</p>
 				<p className={cx("text-title leading-tight font-prata text-center xl:w-[60%]")}>Discover Borneo's Hidden Heart</p>
 				<p className={cx("text-center text-description lg:w-[55%]")}>Immerse yourself in the beauty of Borneo's rivers, where each journey unveils the stories of the land, wildlife, and people.</p>
-				<Button onClick={() => router.push("/river-cruise")}>Explore Our Cruises</Button>
+				<Button onClick={() => router.push("/cruise")}>Explore Our Cruises</Button>
 			</div>
 
 			<GradientImage src="/images/boats/hero-home.jpeg" className="" />

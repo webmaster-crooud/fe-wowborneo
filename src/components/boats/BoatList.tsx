@@ -25,7 +25,7 @@ export default function BoatList({ name, slug, cover, description, facilities, i
 				<div>
 					<p className={cx("text-subtitle leading-tight font-prata ")}>{name}</p>
 					<p className={cx("text-description leading-tight mt-6")}>{description}</p>
-					<div className="flex flex-col gap-10 mt-10 xl:flex-row">
+					<div className="grid grid-cols-1 gap-10 mt-10 xl:grid-cols-3">
 						{facilities?.map((item) => {
 							return (
 								<div className="flex gap-5 items-center xl:flex-col xl:items-start">

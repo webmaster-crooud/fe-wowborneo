@@ -65,7 +65,23 @@ export const BOAT: IBoat[] = [
 			image: "/images/boats/boat-deck.png",
 			description: "At Wow Borneo, we believe that the journey is just as important as the destination. With the Rahai’i Pangun, you’ll enjoy not only the sights but the sounds and stories of Borneo’s jungle. Our English-speaking guides and dedicated crew are here to make sure that every moment of your adventure is as magical as the surroundings. From jungle sightings to cultural encounters, this journey promises memories that will stay with you long after the cruise ends.",
 		},
-		facilities: [],
+		facilities: [
+			{
+				name: "Spacious viewing deck",
+				description: "Relax and take in the surrounding views from our open upper deck.",
+				icon: "/images/icons/boats/panoramic.png",
+			},
+			{
+				name: "Air-conditioned Comfort",
+				description: "Each cabin is equipped with air conditioning and a private ensuite.",
+				icon: "/images/icons/boats/air-con.png",
+			},
+			{
+				name: "Renowned Cuisine",
+				description: "Savor freshly prepared meals while cruising along the river.",
+				icon: "/images/icons/boats/meals.png",
+			},
+		],
 	},
 	{
 		// Sekonyer
@@ -131,7 +147,23 @@ export const BOAT: IBoat[] = [
 			image: "/images/boats/boat-deck.png",
 			description: "Sekonyer offers a rare blend of tradition and comfort, allowing you to explore Borneo’s jungle in a way that feels both immersive and effortless. Led by our friendly crew and knowledgeable, English-speaking guide, you’ll witness the magic of the rainforest and connect with the unique rhythms of river life. Step aboard Sekonyer and let Borneo’s enchanting landscape captivate you.",
 		},
-		facilities: [],
+		facilities: [
+			{
+				name: "Traditional Hull",
+				description: "Built with a classic klotok hull for an authentic Bornean experience.",
+				icon: "/images/icons/boats/panoramic.png",
+			},
+			{
+				name: "Upper Deck Dining",
+				description: "Dine and relax with unimpeded views of the jungle.",
+				icon: "/images/icons/boats/meals-on-deck.png",
+			},
+			{
+				name: "Comfortable Cabins",
+				description: "Each cabin comes with air conditioning and ensuite bathrooms.",
+				icon: "/images/icons/boats/luxurius.png",
+			},
+		],
 	},
 	{
 		// Kumai
@@ -197,7 +229,23 @@ export const BOAT: IBoat[] = [
 			image: "/images/boats/boat-deck.png",
 			description: "Kumai offers more than just an eco-friendly way to travel—it’s an invitation to connect with nature responsibly. Led by experienced English-speaking guides and supported by a dedicated crew, your journey on Kumai is as enriching as it is relaxing. Join us aboard Kumai and let this unique vessel take you deeper into the heart of Borneo, where each day reveals a new story of the jungle.",
 		},
-		facilities: [],
+		facilities: [
+			{
+				name: "Eco-Friendly Design",
+				description: "Solar-powered for a greener cruising experience.",
+				icon: "/images/icons/boats/eco-friendly.png",
+			},
+			{
+				name: "Intimate Spaces",
+				description: "Enjoy the river views from cozy lounges and sun decks.",
+				icon: "/images/icons/boats/ship.png",
+			},
+			{
+				name: "3 Cabins with Ensuites",
+				description: "Comfortably accommodates up to six guests with privacy and style.",
+				icon: "/images/icons/boats/luxurius.png",
+			},
+		],
 	},
 	{
 		// The Spirit of Kalimantan
@@ -263,6 +311,22 @@ export const BOAT: IBoat[] = [
 			image: "/images/boats/boat-deck.png",
 			description: "With The Spirit of Kalimantan, every aspect of your journey is designed to inspire and captivate. From guided walks into Sebangau National Park, bird watching excursions and visits to Dayak villages, to moments of pure tranquility on deck, this experience offers an intimate view of Borneo’s diverse wildlife, landscapes and cultures. Join us for a journey that is as enlightening as it is enchanting, where every day brings a new perspective on the wonders of Kalimantan.",
 		},
-		facilities: [],
+		facilities: [
+			{
+				name: "Luxury and Comfort",
+				description: "Unwind in air-conditioned cabins with ensuite bathrooms.",
+				icon: "/images/icons/boats/luxurius.png",
+			},
+			{
+				name: "Exclusive Experiences",
+				description: "Trek for a glimpse of the endangered orangutan, Bird-watching and Night spotting excursions in the Sebangau National Park.",
+				icon: "/images/icons/boats/sun-deck.png",
+			},
+			{
+				name: "Panoramic Views",
+				description: "Watch as the scenery slips by from the screened saloon or rooftop deck.",
+				icon: "/images/icons/boats/panoramic.png",
+			},
+		],
 	},
 ];
