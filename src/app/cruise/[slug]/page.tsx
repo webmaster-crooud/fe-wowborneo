@@ -6,6 +6,7 @@ import Hero from "@/components/riverCruise/slug/Hero";
 import Introduction from "@/components/riverCruise/slug/Introduction";
 import Package from "@/components/riverCruise/slug/Package";
 import Footer from "@/components/ui/Footer";
+import Navbar from "@/components/ui/Navbar";
 import { getCruiseBySlug } from "@/utils/CruiseHelper";
 import { useParams } from "next/navigation";
 
@@ -14,6 +15,7 @@ export default function DetailCruise() {
 	const cruise = getCruiseBySlug(slug as string);
 	return (
 		<>
+			<Navbar />
 			<Hero cover={cruise?.cover || ""} duration={cruise?.duration || ""} subHeading={cruise?.subHeading || ""} title={cruise?.title || ""} key={cruise?.slug} />
 			<Introduction title={cruise?.introduction?.title || ""} text={cruise?.introduction?.text || ""} destinationText={cruise?.destinationText || ""} />
 			<DaySection title={cruise?.title || ""} destinations={cruise?.destination || []} />

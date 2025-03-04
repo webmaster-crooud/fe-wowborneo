@@ -33,7 +33,7 @@ export default function FeaturedCruises() {
 		},
 	];
 	return (
-		<div className={cx("py-80-d space-y-20")}>
+		<div className={cx("py-80-d space-y-10")}>
 			{/* Section 1 */}
 			<Container className={cx("text-center flex flex-col justify-center items-center relative py-2")}>
 				<h1 className={cx("text-subtitle font-prata")}>Featured Cruises</h1>
@@ -60,9 +60,9 @@ export default function FeaturedCruises() {
 								<p className={cx("lg:w-[55%] text-description xl:w-[50%]")}>An expedition that combines encounters with Kalimantan's iconic orangutans and visits to the Dayak villages, rich in culture and history.</p>
 							</div>
 
-							<div className={cx("w-full h-44 rounded-xl relative overflow-hidden sm:h-80 md:rounded-none md:h-96 lg:h-screen")}>
+							<div className={cx("w-full h-44 rounded-xl relative overflow-hidden sm:h-80 md:rounded-none md:h-96 lg:h-[75vh]")}>
 								<div className={cx("hidden w-full h-full bg-[#37281780]/50 absolute z-10 md:block")}></div>
-								<Image src={image} alt="picture of orang utan" className="w-full rounded-lg object-cover md:rounded-none lg:h-screen" height={1000} width={1000} />
+								<Image src={image} alt="picture of orang utan" className="w-full rounded-lg object-cover md:rounded-none lg:h-[75vh]" height={1000} width={1000} />
 							</div>
 						</Container>
 					</CarouselItem>

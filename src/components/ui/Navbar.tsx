@@ -12,6 +12,11 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchData } from "@/lib/fetchData";
 import GradientImage from "./GradientImage";
 import Link from "next/link";
+import Star from "./Star";
+import Image from "next/image";
+import { cruiseData } from "@/constants/cruise";
+import { BOAT } from "@/constants/boat";
+import { tourData } from "@/constants/tour";
 
 interface ServiceCategoryName {
 	id: string;
@@ -86,6 +91,20 @@ export default function Navbar() {
 	// 	queryKey: ["navbarOurServices"],
 	// 	queryFn: () => fetchData("service-category/show-all"),
 	// });
+	const cruiseSubmenu = cruiseData.map((cruise) => ({
+		title: cruise.title || "",
+		slug: `cruise/${cruise.slug}`,
+	}));
+
+	const boatsSubmenu = BOAT.map((boat) => ({
+		title: boat.name || "",
+		slug: `boats/${boat.slug}`,
+	}));
+
+	const tourSubmenu = tourData.map((tour) => ({
+		title: tour.title || "",
+		slug: `tour/${tour.slug}`,
+	}));
 
 	const navbarLinks = [
 		{
@@ -94,21 +113,32 @@ export default function Navbar() {
 			className: "navbar-link",
 		},
 		{
-			label: "River Cruise",
+			label: "Cruise",
 			href: "/cruise",
-			className: "navbar-link",
+			className: "navbar-link relative group",
+			submenu: cruiseSubmenu,
 		},
 		{
 			label: "Boats",
 			href: "/boats",
-			className: "navbar-link",
+			className: "navbar-link relative group",
+			submenu: boatsSubmenu,
 		},
 		{
 			label: "Explore",
 			href: "/explore",
 			className: "navbar-link",
 		},
+		{
+			label: "Tour",
+			href: "/tour",
+			className: "navbar-link relative group",
+			submenu: tourSubmenu,
+		},
 	];
+
+	// State untuk submenu hover
+	const [hoveredSubmenu, setHoveredSubmenu] = useState<string | null>(null);
 
 	return (
 		<nav ref={container} className="h-0 relative top-0 z-40 w-full">
@@ -124,9 +154,12 @@ export default function Navbar() {
 							<div className={cx("w-[1px] bg-white h-[20px]")}></div>
 						</div>
 						{navbarLinks.map((link, index) => (
-							<TransitionLink key={index} href={link.href} className={cx(link.className)}>
-								{link.label}
-							</TransitionLink>
+							<div key={index} className="relative" onMouseEnter={() => link.submenu && setHoveredSubmenu(link.label)} onMouseLeave={() => setHoveredSubmenu(null)}>
+								<TransitionLink href={link.href} className={cx(link.className)}>
+									{link.label}
+								</TransitionLink>
+								{link.submenu && <Submenu items={link.submenu} isActive={hoveredSubmenu === link.label} />}
+							</div>
 						))}
 					</div>
 				</div>
@@ -144,36 +177,69 @@ export default function Navbar() {
 			</Container>
 
 			<div className={cx("z-40 w-full md:w-[50%] xl:w-[40%] h-screen bg-[#F1E6DD] absolute top-0 left-0", "container-menu-navbar")}>
-				<div className="h-full w-full z-50 p-6 flex flex-col justify-between sm:p-10">
-					<p className="font-bold text-2xl cursor-pointer" onClick={clickToggleMenu}>
+				<div className="h-full w-full z-50 p-6 flex flex-col justify-end sm:p-10">
+					<p className="text-xl cursor-pointer" onClick={clickToggleMenu}>
 						X
 					</p>
-					<div className="space-y-5">
-						<p className="text-[#563b28b3] text-xs sm:text-xl">Menu</p>
-						<div className="flex flex-col font-medium text-2xl font-prata gap-1 sm:text-5xl  w-52">
-							<p>Discover Borneo's Hidden Heart</p>
+
+					<p className="text-xs uppercase font-extrabold tracking-widest my-10">Menu</p>
+					<div className="flex flex-col font-medium text-2xl font-prata gap-1 sm:text-5xl w-[60%]">
+						<p>The Best Boat On The River</p>
+					</div>
+
+					<div className="grid grid-cols-2 gap-4 py-8 border-y border-black my-5">
+						<div className="space-y-4 text-xs sm:text-sm">
+							<p className="uppercase font-bold">About</p>
+							<div className="flex flex-col gap-2">
+								<Link href={"/"} className="capitalize font-medium">
+									Our Story
+								</Link>
+								<Link href={"/"} className="capitalize font-medium">
+									Our Misson Statement
+								</Link>
+								<Link href={"/"} className="capitalize font-medium">
+									Sustainability Statement
+								</Link>
+							</div>
+						</div>
+						<div className="space-y-4 text-xs sm:text-sm">
+							<p className="uppercase font-bold">LOGIN</p>
+							<div className="flex flex-col gap-2">
+								<Link href={"/"} className="capitalize font-medium">
+									Cruise Check-in
+								</Link>
+								<Link href={"/"} className="capitalize font-medium">
+									Agent Portal
+								</Link>
+							</div>
 						</div>
 					</div>
-					<div className="grid grid-cols-2 gap-4 py-8">
-						<div className="space-y-4 text-xs sm:text-sm">
-							<p className="text-[#563b28b3]">BOATS</p>
-							<div className="flex flex-col gap-2 text-[#563b28]">
-								<Link href={"/"}>Rahai'i Pangun</Link>
-								<Link href={"/"}>Kumai</Link>
-								<Link href={"/"}>Sekonyer</Link>
-							</div>
+
+					<div className={cx("w-full flex flex-col items-start justify-start")}>
+						<div className={cx("w-[263px] h-[35px] relative")}>
+							<Image alt="image" fill src={"/images/icons/stars.png"} />
 						</div>
-						<div className="space-y-4 text-xs sm:text-sm">
-							<p className="text-[#563b28b3]">DISCOVER</p>
-							<div className="flex flex-col gap-2 text-[#563b28]">
-								<Link href={"/"}>Orangutan Village</Link>
-								<Link href={"/"}>Tanjung Puting Rainforest</Link>
-								<Link href={"/"}>Katingan River</Link>
-							</div>
-						</div>
+						<p className={cx("mt-40-d")}>TripAdvisor Traveller's Choise Award Winner 2024</p>
 					</div>
 				</div>
 			</div>
 		</nav>
 	);
 }
+
+interface SubmenuProps {
+	items: Array<{ title: string; slug: string }>;
+	isActive: boolean;
+}
+
+const Submenu = ({ items, isActive }: SubmenuProps) => {
+	return (
+		<div className={cx("absolute top-full left-0 bg-white shadow-lg py-2 min-w-[20rem] transition-opacity duration-200", isActive ? "opacity-100 visible" : "opacity-0 invisible")}>
+			{items.map((item, index) => (
+				<Link key={index} href={`/${item.slug}`} className="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-sm">
+					{item.title}
+				</Link>
+			))}
+		</div>
+	);
+};

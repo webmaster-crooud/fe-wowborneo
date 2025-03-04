@@ -40,9 +40,9 @@ export default function BoatsOverview() {
 								<Button className="text-18-d hover:shadow-lg hover:scale-105 transition w-fit ">Explore Spirit of Kalimantan</Button>
 							</div>
 
-							<div className={cx("w-full h-44 rounded-xl relative overflow-hidden sm:h-80 md:rounded-none md:h-96 lg:h-screen")}>
+							<div className={cx("w-full h-44 rounded-xl relative overflow-hidden sm:h-80 md:rounded-none md:h-96 lg:h-[75vh]")}>
 								<div className={cx("hidden w-full h-full bg-[#37281780]/50 absolute z-10 md:block")}></div>
-								<Image src={image} alt="Image Cruise" className="w-full rounded-lg object-cover object-center md:rounded-none lg:h-screen" height={1000} width={1000} />
+								<Image src={image} alt="Image Cruise" className="w-full rounded-lg object-cover object-center md:rounded-none lg:h-[75vh]" height={1000} width={1000} />
 							</div>
 						</div>
 					</CarouselItem>
