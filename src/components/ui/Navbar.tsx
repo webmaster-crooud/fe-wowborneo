@@ -125,15 +125,15 @@ export default function Navbar() {
 			submenu: boatsSubmenu,
 		},
 		{
-			label: "Explore",
-			href: "/explore",
-			className: "navbar-link",
-		},
-		{
 			label: "Tour",
 			href: "/cruise#tours",
 			className: "navbar-link relative group",
 			submenu: tourSubmenu,
+		},
+		{
+			label: "Explore",
+			href: "/explore",
+			className: "navbar-link",
 		},
 	];
 
