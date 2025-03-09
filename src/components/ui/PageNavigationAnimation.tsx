@@ -76,7 +76,7 @@ const PageNavigationAnimation = () => {
 	}, [pathname]);
 	return (
 		<>
-			<div className={cx("fixed z-50 top-0 w-full h-screen bg-white max-h-screen initial-banner")}>
+			<div className={cx("fixed z-[60] top-0 w-full h-screen bg-white max-h-screen initial-banner")}>
 				<div className="absolute inset-0 flex flex-col items-center justify-center gap-2" ref={textContainerRef}>
 					<h2 className="font-semibold text-2xl font-prata">Wow Borneo</h2>
 				</div>
@@ -87,7 +87,7 @@ const PageNavigationAnimation = () => {
 					</div>
 				</div>
 			</div>
-			<div className={cx("fixed z-40 top-0 w-full h-screen bg-white max-h-screen page-banner hidden")} />
+			<div className={cx("fixed z-50 top-0 w-full h-screen bg-white max-h-screen page-banner hidden")} />
 		</>
 	);
 };
