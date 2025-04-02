@@ -33,7 +33,7 @@ export default function RootLayout({
 	return (
 		<ReactQueryClientProvider>
 			<html lang="en">
-				<body className={`${openSans.variable} ${prata.variable} antialiased font-body scroll-smooth overflow-hidden`}>
+				<body className={`${openSans.variable} ${prata.variable} antialiased font-body scroll-smooth overflow-x-hidden`}>
 					<Providers>
 						<PageNavigationAnimation />
 						{children}
