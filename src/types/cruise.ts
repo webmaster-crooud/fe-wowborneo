@@ -8,6 +8,7 @@ export interface ICruise {
 	destination?: IDestination[];
 	destinationText?: string;
 	cover: string;
+	departure?: string;
 	introduction?: {
 		title?: string;
 		text?: string;
