@@ -2,7 +2,6 @@
 
 import React, { useEffect } from "react";
 import Hero from "./Hero";
-import Privacy from "./Privacy";
 import { toggleNavbar } from "@/stores/navbar";
 import useVariantsOnScroll from "@/hooks/useVariantsOnScroll";
 import Navbar from "../ui/Navbar";
@@ -16,33 +15,33 @@ import Testimonial from "./Testimonial";
 import Experience from "./Experience";
 
 export default function Home() {
-  const state = toggleNavbar();
+	const state = toggleNavbar();
 
-  const navbarColors = [0, 1];
+	const navbarColors = [0, 1];
 
-  const updateNavbarColor = (color: number) => {
-    state.updateNavbarColorNew(color);
-  };
+	const updateNavbarColor = (color: number) => {
+		state.updateNavbarColorNew(color);
+	};
 
-  useVariantsOnScroll(navbarColors, ".fullscreen", updateNavbarColor);
+	useVariantsOnScroll(navbarColors, ".fullscreen", updateNavbarColor);
 
-  useEffect(() => {
-    state.updateNavbarColorNew(0);
-  }, []);
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <Introduction />
-      <Divider />
-      <FeaturedCruises />
-      <Divider />
-      <BoatsOverview />
-      <Experience />
-      <Resource />
-      <Divider />
-      <Testimonial />
-      <Footer />
-    </>
-  );
+	useEffect(() => {
+		state.updateNavbarColorNew(0);
+	}, []);
+	return (
+		<>
+			<Navbar />
+			<Hero />
+			<Introduction />
+			<Divider />
+			<FeaturedCruises />
+			<Divider />
+			<BoatsOverview />
+			<Experience />
+			<Resource />
+			<Divider />
+			<Testimonial />
+			<Footer />
+		</>
+	);
 }

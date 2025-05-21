@@ -18,7 +18,7 @@ export default function Hero() {
 				<Button onClick={() => router.push("/cruise")}>Explore Our Cruises</Button>
 			</div>
 
-			<GradientImage src="/images/boats/hero-home.jpeg" className="" />
+			<GradientImage src="/home/hero.webp" className="" />
 		</div>
 	);
 }

@@ -9,19 +9,19 @@ const Experience = () => {
 	const router = useRouter();
 	const data = [
 		{
-			img: "/images/people/family5.png",
+			img: "/home/experience_central_1.webp",
 			title: "Central Borneo",
 			description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo...",
 			url: "/",
 		},
 		{
-			img: "/images/wildlife/orangutan6.png",
+			img: "/home/experience_pangkalanbun_2.webp",
 			title: "Pangkalan Bun",
 			description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo...",
 			url: "/",
 		},
 		{
-			img: "/images/people/woman5.png",
+			img: "/home/experience_dayak_culture_3.webp",
 			title: "Dayak Culture",
 			description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo...",
 			url: "/",

@@ -20,7 +20,7 @@ export default function Hero() {
 				</Button>
 			</div>
 
-			<GradientImage src="/images/nature/river3.png" />
+			<GradientImage src="/cruise/hero.webp" />
 		</div>
 	);
 }

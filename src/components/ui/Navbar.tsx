@@ -124,12 +124,12 @@ export default function Navbar() {
 			className: "navbar-link relative group",
 			submenu: boatsSubmenu,
 		},
-		{
-			label: "Tour",
-			href: "/cruise#tours",
-			className: "navbar-link relative group",
-			submenu: tourSubmenu,
-		},
+		// {
+		// 	label: "Tour",
+		// 	href: "/cruise#tours",
+		// 	className: "navbar-link relative group",
+		// 	submenu: tourSubmenu,
+		// },
 		{
 			label: "Explore",
 			href: "/explore",

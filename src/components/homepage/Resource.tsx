@@ -23,7 +23,7 @@ export default function Resource() {
 				</div>
 				<div className={cx("hidden w-full h-full bg-[#37281780]/70 absolute z-10 md:block")}></div>
 				<div className={cx("w-full h-44 rounded-xl overflow-hidden sm:h-80 md:rounded-none md:h-96 lg:h-full")}>
-					<GradientImage src="/images/people/man4.png" className="object-contain" />
+					<GradientImage src="/home/resources.webp" className="object-contain" />
 				</div>
 			</div>
 		</Container>

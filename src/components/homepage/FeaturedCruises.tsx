@@ -10,7 +10,7 @@ import { useGSAP } from "@gsap/react";
 import ImageSlider from "./ImageSlider";
 import { CarouselItem } from "../ui/carousel";
 
-const sliderImages = ["/images/wildlife/orangutan.png", "/images/wildlife/bekantan.png", "/images/wildlife/deer.png", "/images/wildlife/komodo.png"];
+const sliderImages = ["/home/featured.webp", "/images/wildlife/bekantan.png", "/images/wildlife/deer.png", "/images/wildlife/komodo.png"];
 
 export default function FeaturedCruises() {
 	const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
@@ -19,17 +19,17 @@ export default function FeaturedCruises() {
 		{
 			head: "Exclusive Access",
 			desc: "Visit Camp Leakey, a renowned orangutan rehabilitation center, accessible only through special partnerships.",
-			img: "/images/wildlife/orangutan2.png",
+			img: "/home/exclusive.webp",
 		},
 		{
 			head: "Local Guideline",
 			desc: "Visit Camp Leakey, a renowned orangutan rehabilitation center, accessible only through special partnerships.",
-			img: "/images/people/woman2.png",
+			img: "/home/local.webp",
 		},
 		{
 			head: "Sustainable Statement",
 			desc: "Visit Camp Leakey, a renowned orangutan rehabilitation center, accessible only through special partnerships.",
-			img: "/images/people/man5.png",
+			img: "/home/sustainable.webp",
 		},
 	];
 	return (

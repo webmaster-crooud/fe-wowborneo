@@ -2,7 +2,6 @@
 
 import { cx } from "class-variance-authority";
 import React, { useState } from "react";
-import GradientImage from "../ui/GradientImage";
 import Image from "next/image";
 
 export default function CardWhyChoose({ item, height = "h-[25vw]", isOpen, onClick, colSpan }: { item: { head: string; desc: string; img: string }; height: string; isOpen: boolean; onClick: () => void; colSpan: string }) {

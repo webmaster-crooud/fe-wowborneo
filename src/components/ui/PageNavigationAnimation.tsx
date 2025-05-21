@@ -10,12 +10,12 @@ import React, { useRef } from "react";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const heroImages: { [key: string]: string } = {
-	"/": "/images/boats/hero-home.jpeg",
+	"/": "/home/hero.webp",
 	"/explore": "/images/people/crowd.png",
 	"/explore/detail": "/images/nature/river.png",
 	"/boats": "/images/nature/river7.png",
 	"/boats/detail": "/images/nature/river2.png",
-	"/cruise": "/images/nature/river3.png",
+	"/cruise": "/cruise/hero.webp",
 	// "/cruise/:slug": "/images/nature/sea.png",
 };
 

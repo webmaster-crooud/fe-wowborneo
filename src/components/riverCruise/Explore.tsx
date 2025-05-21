@@ -67,7 +67,7 @@ export default function Explore() {
 				</div>
 				<div className={cx("hidden absolute top-0 z-10 w-full h-full bg-black/50 sm:block")}></div>
 				<div className="aspect-video w-full">
-					<GradientImage src="/images/people/woman.png" className="rounded-lg sm:rounded-none" />
+					<GradientImage src="/cruise/explore.webp" className="rounded-lg sm:rounded-none" />
 				</div>
 			</div>
 			<Container className={cx("flex flex-col gap-120-d")}>
