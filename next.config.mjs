@@ -7,11 +7,6 @@ const nextConfig = {
 				destination: "/",
 				permanent: true, // true untuk redirect permanen (308), false untuk sementara (307)
 			},
-			{
-				source: "/story",
-				destination: "/our-story",
-				permanent: true, // true untuk redirect permanen (308), false untuk sementara (307)
-			},
 		];
 	},
 	images: {
