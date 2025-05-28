@@ -39,8 +39,8 @@ const Experience = () => {
 				</Button>
 			</div>
 			<div className="flex flex-col gap-8">
-				{data.map((item) => (
-					<ExperienceCard item={item} />
+				{data.map((item, i) => (
+					<ExperienceCard item={item} key={i} />
 				))}
 			</div>
 		</Container>

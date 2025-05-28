@@ -8,8 +8,11 @@ import GradientImage from "./GradientImage";
 import Button from "../button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useAtom } from "jotai";
+import { navbarAtom } from "@/stores/nav";
 
 export default function Footer() {
+	const [{ data }] = useAtom(navbarAtom);
 	const divRef = useRef<HTMLDivElement>(null);
 	const [visibleHeight, setVisibleHeight] = useState(0);
 	const router = useRouter();
@@ -59,10 +62,16 @@ export default function Footer() {
 					<div className={cx("w-full")}>
 						<p className={cx("font-medium")}>PLAN YOUR CRUISE</p>
 						<div className={cx("mt-32-d font-semibold flex flex-col gap-16-d")}>
-							<p>Orangutan & Daya Village</p>
-							<p>Orangutan Tours in Tanjung Puting</p>
-							<p>Katingan River & Sebangau National Park</p>
-							<p>Combination Tours Cruise & Tours</p>
+							<>
+								{/* List cruise */}
+								{data?.cruise.slice(0, 10).map((c) => (
+									<Link href={`/cruise/${c.slug}`} key={c.slug}>
+										{c.title}
+									</Link>
+								))}
+
+								<Link href={""}>Explore All</Link>
+							</>
 						</div>
 					</div>
 					<div className={cx("w-full lg:ml-80-d")}>
@@ -90,18 +99,18 @@ export default function Footer() {
 				<Container className={cx("py-8 w-full sm:py-1 lg:border lg:border-r-black lg:border-t-black lg:py-80-d lg:col-span-1 col-span-3")}>
 					<div className={cx("h-full w-full sm:flex sm:justify-center lg:justify-end")}>
 						<div className={cx("flex flex-row w-full gap-6 sm:justify-center sm:flex-col xl:flex-row")}>
-							<div className={cx("flex flex-row gap-16-d xl:items-end")}>
+							<Link href={"https://www.instagram.com/wowborneo/"} target="_blank" className={cx("flex flex-row gap-16-d xl:items-end")}>
 								<div className={cx("flex items-center")}>
 									<Image width={15} height={15} alt="image" src={"/images/icons/socialMedia/instagram.png"} />
 								</div>
 								<p>Instagram</p>
-							</div>
-							<div className={cx("flex flex-row gap-16-d xl:items-end")}>
+							</Link>
+							<Link href={"https://www.youtube.com/channel/UCrqgsD90fss2NyjNiAAEdpA"} className={cx("flex flex-row gap-16-d xl:items-end")}>
 								<div className={cx("flex items-center")}>
 									<Image width={15} height={15} alt="image" src={"/images/icons/socialMedia/youtube.png"} />
 								</div>
 								<p>Youtube</p>
-							</div>
+							</Link>
 							<div className={cx("flex flex-row gap-16-d xl:items-end")}>
 								<div className={cx("flex items-center")}>
 									<Image width={15} height={15} alt="image" src={"/images/icons/socialMedia/linkedin.png"} />

@@ -19,6 +19,9 @@ import Image from "next/image";
 import { cruiseData } from "@/constants/cruise";
 import { BOAT } from "@/constants/boat";
 import { tourData } from "@/constants/tour";
+import { HomePageResponse } from "@/types/home";
+import { useAtom } from "jotai";
+import { navbarAtom } from "@/stores/nav";
 
 interface ServiceCategoryName {
 	id: string;
@@ -32,6 +35,7 @@ interface ServiceCategoryName {
 // }
 
 export default function Navbar() {
+	const [{ data }] = useAtom(navbarAtom);
 	const state = toggleNavbar();
 	const container = useRef<HTMLDivElement>(null);
 	const [toggle, setToggle] = useState<boolean>(false);
@@ -93,12 +97,12 @@ export default function Navbar() {
 	// 	queryKey: ["navbarOurServices"],
 	// 	queryFn: () => fetchData("service-category/show-all"),
 	// });
-	const cruiseSubmenu = cruiseData.map((cruise) => ({
+	const cruiseSubmenu = data?.cruise.map((cruise) => ({
 		title: cruise.title || "",
 		slug: `cruise/${cruise.slug}`,
 	}));
 
-	const boatsSubmenu = BOAT.map((boat) => ({
+	const boatsSubmenu = data?.boat.map((boat) => ({
 		title: boat.name || "",
 		slug: `boats/${boat.slug}`,
 	}));

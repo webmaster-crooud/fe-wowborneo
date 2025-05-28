@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect } from "react";
 import Hero from "./Hero";
 import { toggleNavbar } from "@/stores/navbar";
@@ -13,8 +12,8 @@ import BoatsOverview from "./BoatsOverview";
 import Resource from "./Resource";
 import Testimonial from "./Testimonial";
 import Experience from "./Experience";
-
-export default function Home() {
+import { HomePageResponse } from "@/types/home";
+export default function Home({ data }: { data: HomePageResponse }) {
 	const state = toggleNavbar();
 
 	const navbarColors = [0, 1];
@@ -34,9 +33,9 @@ export default function Home() {
 			<Hero />
 			<Introduction />
 			<Divider />
-			<FeaturedCruises />
+			<FeaturedCruises cruise={data.cruise} />
 			<Divider />
-			<BoatsOverview />
+			<BoatsOverview boat={data.boat} />
 			<Experience />
 			<Resource />
 			<Divider />
