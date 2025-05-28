@@ -179,7 +179,7 @@ export default function Navbar() {
 					</div>
 				</Link>
 
-				<TransitionLink href="/reservation" opacity={false}>
+				<TransitionLink href={`${process.env.NEXT_PUBLIC_TRANSACTION}`} opacity={false}>
 					<Button rounded="rounded-full" className="text-sm bg-white/30 backdrop-blur-md hover:bg-white/50">
 						Book your cruise
 					</Button>
