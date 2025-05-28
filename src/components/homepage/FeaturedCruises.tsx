@@ -40,9 +40,9 @@ export default function FeaturedCruises() {
 				<p className={cx("mt-24-d text-description lg:w-[50%]")}>Choose from our carefully crafted cruises, each offering a unique experience of Borneo's natural beauty and cultural treasures.</p>
 			</Container>
 			{/* Section 2 */}
-			<ImageSlider>
+			<ImageSlider key={"ImageFeatureCruise"}>
 				{sliderImages.map((image, index) => (
-					<CarouselItem>
+					<CarouselItem key={index}>
 						<Container className={cx("w-full relative space-y-10 px-4 py-2 sm:px-8 md:px-0 md:space-y-0 md:flex md:flex-col md:items-center md:justify-center")}>
 							<div className={cx("w-full h-full flex flex-col gap-24-d justify-center items-center md:absolute md:justify-center md:z-20 md:text-white md:text-center md:px-32 md:h-fit")}>
 								<div className="hidden space-y-3 md:block lg:space-y-6">

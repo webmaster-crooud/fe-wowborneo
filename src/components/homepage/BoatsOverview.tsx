@@ -40,9 +40,9 @@ export default function BoatsOverview() {
 				</div>
 				<p className={cx("text-description lg:w-full text-start")}>Our fleet of purpose-built river cruisers provides the perfect blend of comfort and authenticity. Each boat is crafted to bring you closer to nature while offering modern amenities to make your journey unforgettable.</p>
 			</div>
-			<ImageSlider>
+			<ImageSlider key={"imageBoatOverview"}>
 				{overview.map((o, index) => (
-					<CarouselItem>
+					<CarouselItem key={index}>
 						<div className={cx("lg:h-[46.875vw] w-full mt-64-d relative space-y-10 md:space-y-0")}>
 							<div className={cx("w-full h-full flex flex-col gap-24-d justify-center md:items-center md:absolute md:z-20 md:text-white md:text-center md:px-32 md:py-8 md:justify-between lg:p-32")}>
 								<div className="hidden space-y-3 md:block lg:space-y-6">

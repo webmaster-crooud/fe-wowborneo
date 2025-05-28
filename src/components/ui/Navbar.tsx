@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import Container from "./Container";
 import Button from "../button";
@@ -23,11 +25,11 @@ interface ServiceCategoryName {
 	name: string;
 }
 
-interface ServiceCategoryNameResponse {
-	data: {
-		items: ServiceCategoryName[];
-	};
-}
+// interface ServiceCategoryNameResponse {
+// 	data: {
+// 		items: ServiceCategoryName[];
+// 	};
+// }
 
 export default function Navbar() {
 	const state = toggleNavbar();
@@ -64,16 +66,16 @@ export default function Navbar() {
 
 	const pathname = usePathname();
 
-	const clickToggle = contextSafe(() => {
-		setToggle(!toggle);
+	// const clickToggle = contextSafe(() => {
+	// 	setToggle(!toggle);
 
-		gsap.to(".details-our-services", {
-			opacity: !toggle ? 1 : 0,
-			display: !toggle ? "block" : "hidden",
-			duration: 0.4,
-			ease: "power1.inOut",
-		});
-	});
+	// 	gsap.to(".details-our-services", {
+	// 		opacity: !toggle ? 1 : 0,
+	// 		display: !toggle ? "block" : "hidden",
+	// 		duration: 0.4,
+	// 		ease: "power1.inOut",
+	// 	});
+	// });
 
 	const clickToggleMenu = contextSafe(() => {
 		setToggleMenu(!toggleMenu);
@@ -101,10 +103,10 @@ export default function Navbar() {
 		slug: `boats/${boat.slug}`,
 	}));
 
-	const tourSubmenu = tourData.map((tour) => ({
-		title: tour.title || "",
-		slug: `tour/${tour.slug}`,
-	}));
+	// const tourSubmenu = tourData.map((tour) => ({
+	// 	title: tour.title || "",
+	// 	slug: `tour/${tour.slug}`,
+	// }));
 
 	const navbarLinks = [
 		{
@@ -162,11 +164,11 @@ export default function Navbar() {
 							<div className={cx("w-[1px] bg-white h-[20px]")}></div>
 						</div>
 						{navbarLinks.map((link, index) => (
-							<div key={index} className="relative" onMouseEnter={() => link.submenu && setHoveredSubmenu(link.label)} onMouseLeave={() => setHoveredSubmenu(null)}>
+							<div key={index} onMouseEnter={() => link.submenu && setHoveredSubmenu(link.label)} onMouseLeave={() => setHoveredSubmenu(null)}>
 								<TransitionLink href={link.href} className={cx(link.className)}>
 									{link.label}
 								</TransitionLink>
-								{link.submenu && <Submenu items={link.submenu} isActive={hoveredSubmenu === link.label} />}
+								{link.submenu && <Submenu label={link.label} items={link.submenu} isActive={hoveredSubmenu === link.label} />}
 							</div>
 						))}
 					</div>
@@ -249,16 +251,20 @@ export default function Navbar() {
 interface SubmenuProps {
 	items: Array<{ title: string; slug: string }>;
 	isActive: boolean;
+	label: string;
 }
 
-const Submenu = ({ items, isActive }: SubmenuProps) => {
+const Submenu = ({ items, isActive, label }: SubmenuProps) => {
 	return (
-		<div className={cx("absolute top-full left-0 bg-white shadow-lg py-2 min-w-[20rem] transition-opacity duration-200", isActive ? "opacity-100 visible" : "opacity-0 invisible")}>
-			{items.map((item, index) => (
-				<Link key={index} href={`/${item.slug}`} className="block px-4 py-2 text-gray-800 hover:bg-gray-100 text-sm">
-					{item.title}
-				</Link>
-			))}
+		<div className={cx("absolute top-16 left-0 right-0 p-10 bg-[#FAEFE6] rounded-xl shadow-lg w-10/12 mx-auto transition-opacity duration-200", isActive ? "opacity-100 visible" : "opacity-0 invisible")}>
+			<h5 className="text-4xl font-prata text-black">{label}</h5>
+			<div className="grid grid-cols-3 gap-x-5 gap-y-0 mt-10 pt-10 border-t border-black">
+				{items.map((item, index) => (
+					<Link key={index} href={`/${item.slug}`} className="block px-4 py-1 text-gray-800 text-sm">
+						{item.title}
+					</Link>
+				))}
+			</div>
 		</div>
 	);
 };

@@ -83,7 +83,7 @@ const PageNavigationAnimation = () => {
 				<div className="absolute inset-0 flex items-end justify-center">
 					<div className="relative image-container h-96 w-96 hidden">
 						<div className="w-full h-full bg-black opacity-30 z-10 absolute" />
-						<Image src={heroImages[pathname]} alt="" width={100} height={100} className="w-full h-full object-cover" />
+						<Image src={heroImages[pathname] || "/images/nature/sea.png"} alt="" width={100} height={100} className="w-full h-full object-cover" />
 					</div>
 				</div>
 			</div>
