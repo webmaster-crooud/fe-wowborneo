@@ -5,6 +5,7 @@ import GradientImage from "../ui/GradientImage";
 import Button from "../button";
 import { IFacility } from "@/types/boat";
 import { useRouter } from "next/navigation";
+import { SafeHTML } from "../SafeHTML";
 
 type propsBoatList = {
 	cover: string;
@@ -24,7 +25,7 @@ export default function BoatList({ name, slug, cover, description, facilities, i
 				</div>
 				<div>
 					<p className={cx("text-subtitle leading-tight font-prata ")}>{name}</p>
-					<p className={cx("text-description leading-tight mt-6")}>{description}</p>
+					<p className={cx("text-description leading-tight mt-6 w-full")} dangerouslySetInnerHTML={{ __html: description }}></p>
 					<div className="grid grid-cols-1 gap-10 mt-10 xl:grid-cols-3">
 						{facilities?.map((item) => {
 							return (
@@ -34,7 +35,7 @@ export default function BoatList({ name, slug, cover, description, facilities, i
 									</div>
 									<div className="flex flex-col justify-between p-0 items-start">
 										<span className="text-sm font-bold tracking-wider w-full">{item.name}</span>
-										<p>{item.description}</p>
+										<p dangerouslySetInnerHTML={{ __html: item.description }} />
 									</div>
 								</div>
 							);

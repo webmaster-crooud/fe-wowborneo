@@ -105,24 +105,32 @@ export default function Footer() {
 								</div>
 								<p>Instagram</p>
 							</Link>
-							<Link href={"https://www.youtube.com/channel/UCrqgsD90fss2NyjNiAAEdpA"} className={cx("flex flex-row gap-16-d xl:items-end")}>
+							<Link href={"https://www.youtube.com/channel/UCrqgsD90fss2NyjNiAAEdpA"} target="_blank" className={cx("flex flex-row gap-16-d xl:items-end")}>
 								<div className={cx("flex items-center")}>
 									<Image width={15} height={15} alt="image" src={"/images/icons/socialMedia/youtube.png"} />
 								</div>
 								<p>Youtube</p>
 							</Link>
-							<div className={cx("flex flex-row gap-16-d xl:items-end")}>
+							<Link href={"https://id.linkedin.com/company/wow-borneo"} target="_blank" className={cx("flex flex-row gap-16-d xl:items-end")}>
 								<div className={cx("flex items-center")}>
 									<Image width={15} height={15} alt="image" src={"/images/icons/socialMedia/linkedin.png"} />
 								</div>
 								<p>Linkedin</p>
-							</div>
+							</Link>
 						</div>
 					</div>
 				</Container>
 				<Container className={cx("py-4 lg:py-80-d lg:col-span-1 col-span-3 lg:border-t lg:border-t-black")}>
 					<div className={cx("h-full relative")}>
-						<p className={cx("flex flex-row gap-40-d absolute bottom-0 w-full justify-center xl:justify-start")}>Copyright © 2024. All rights reserved</p>
+						<div className={cx("flex flex-col absolute bottom-0 w-full justify-center xl:justify-start")}>
+							Copyright © 2024. All rights reserved.{" "}
+							<div>
+								Designed and developed by{" "}
+								<Link href={"https://crooud.com"} target="_blank" className="font-bold">
+									Crooud
+								</Link>
+							</div>
+						</div>
 					</div>
 				</Container>
 			</div>

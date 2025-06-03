@@ -5,6 +5,7 @@ import AdventureCard from "./AdventureCard";
 import { ICruise } from "@/types/cruise";
 
 const Adventure = ({ title, highlight }: { title: string; highlight: ICruise["highlight"] }) => {
+	console.log(highlight);
 	return (
 		<Container className="space-y-20 pt-2">
 			<div className="space-y-4 lg:flex lg:items-end lg:gap-14">

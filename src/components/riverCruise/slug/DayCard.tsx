@@ -1,3 +1,4 @@
+import { SafeHTML } from "@/components/SafeHTML";
 import { ICruise, IDestination } from "@/types/cruise";
 import Image from "next/image";
 import React from "react";
@@ -12,7 +13,9 @@ const DayCard = ({ data }: { data: IDestination }) => {
 				<p className="text-lg font-semibold lg:text-xl">
 					{data.days}: {data.title}
 				</p>
-				<p className="text-sm lg:text-base">{data.description}</p>
+				<p className="text-sm lg:text-base">
+					<SafeHTML html={data.description || ""} maxWords={1000} />
+				</p>
 			</div>
 		</div>
 	);

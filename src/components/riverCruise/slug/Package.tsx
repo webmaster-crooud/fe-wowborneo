@@ -10,9 +10,11 @@ type propsPackage = {
 	price: string;
 	included: IIncluded[];
 	information: IInformation[];
+	cta: string;
+	slug: string;
 };
 
-const Package: React.FC<propsPackage> = ({ price, included, information }) => {
+const Package: React.FC<propsPackage> = ({ price, included, information, cta, slug }) => {
 	return (
 		<div className="space-y-20 mb-20">
 			<Container className="sm:px-0 py-2">
@@ -41,14 +43,16 @@ const Package: React.FC<propsPackage> = ({ price, included, information }) => {
 				<Container className="py-2">
 					<div className={cx("text-left flex flex-col gap-32-d justify-center items-center lg:text-center")}>
 						<p className={cx("uppercase font-semibold w-full lg:text-base")}>Know Before You Go</p>
-						<p className={cx("font-prata text-2xl w-full")}>Ready for the ultimate Indonesian adventure? Book now and embark on an unforgettable journey through Borneo’s jungles and Komodo’s pristine waters.</p>
+						<p className={cx("font-prata text-2xl w-full")}>{cta}</p>
 					</div>
 				</Container>
 				<Container className="flex flex-col gap-6 py-2 xl:px-72">
 					{information.map((information, index) => (
 						<DetailItem key={index} desc={information.text || ""} title={information.title || ""} />
 					))}
-					<Button className="text-18-d hover:shadow-lg hover:scale-105 transition w-full mx-auto">Book the Ultimate Adventure</Button>
+					<Button onClick={() => window.open(`${process.env.NEXT_PUBLIC_TRANSACTION}?cruise=${slug}`)} className="text-18-d hover:shadow-lg hover:scale-105 transition w-full mx-auto">
+						Book the Ultimate Adventure
+					</Button>
 				</Container>
 			</div>
 		</div>

@@ -21,7 +21,7 @@ const Hero: React.FC<propsHero> = ({ title, duration, cover, subHeading }) => {
 			<div className="absolute z-20 text-white flex flex-col gap-6 items-center justify-center h-full w-full px-4 sm:px-12 md:px-16 md:gap-10">
 				<p className={cx("text-sm text-center font-semibold md:text-base lg:text-lg uppercase tracking-widest")}>river cruise</p>
 				<p className={cx("text-title leading-tight font-prata text-center xl:w-[60%]")}>
-					{title} ({duration})
+					{title} <br /> ({`${duration}D${Number(duration) - 1}N`})
 				</p>
 				<p className={cx("text-description leading-tight text-center lg:w-[80%]")}>{subHeading}</p>
 				<Button onClick={() => router.push("/cruise")} className="text-18-d hover:shadow-lg hover:scale-105 transition w-fit mx-auto">

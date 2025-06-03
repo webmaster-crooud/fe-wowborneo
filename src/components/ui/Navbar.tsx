@@ -205,13 +205,13 @@ export default function Navbar() {
 						<div className="space-y-4 text-xs sm:text-sm">
 							<p className="uppercase font-bold">About</p>
 							<div className="flex flex-col gap-2">
-								<Link href={"/"} className="capitalize font-medium">
+								<Link href={"/story"} className="capitalize font-medium">
 									Our Story
 								</Link>
-								<Link href={"/"} className="capitalize font-medium">
+								<Link href={"/mission"} className="capitalize font-medium">
 									Our Misson Statement
 								</Link>
-								<Link href={"/"} className="capitalize font-medium">
+								<Link href={"/sustainability"} className="capitalize font-medium">
 									Sustainability Statement
 								</Link>
 							</div>
@@ -219,12 +219,12 @@ export default function Navbar() {
 						<div className="space-y-4 text-xs sm:text-sm">
 							<p className="uppercase font-bold">LOGIN</p>
 							<div className="flex flex-col gap-2">
-								<Link href={"/"} className="capitalize font-medium">
+								<Link href={`${process.env.NEXT_PULIC_AUTH}`} className="capitalize font-medium">
 									Cruise Check-in
 								</Link>
-								<Link href={"/"} className="capitalize font-medium">
+								{/* <Link href={"/"} className="capitalize font-medium">
 									Agent Portal
-								</Link>
+								</Link> */}
 							</div>
 						</div>
 

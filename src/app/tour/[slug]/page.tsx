@@ -20,7 +20,7 @@ export default function DetailTour() {
 			<Introduction title={tour?.introduction.title || ""} text={tour?.introduction.text || ""} destinationText={tour?.destinationText || ""} />
 			<DaySection title={tour?.title || ""} destinations={tour?.destination || []} />
 			<Adventure title={tour?.title || ""} highlight={tour?.highlight || []} />
-			<Package included={tour?.included || []} price={tour?.price || ""} information={tour?.information || []} />
+			<Package included={tour?.included || []} price={tour?.price || ""} information={tour?.information || []} cta={tour?.cta || ""} slug={tour?.slug || ""} />
 			<Footer />
 		</>
 	);

@@ -34,8 +34,8 @@ export default function Home() {
 			<Hero />
 			<WelcomeToBorneo />
 			<Explore />
-			<Divider />
-			<Combination />
+			{/* <Divider /> */}
+			{/* <Combination /> */}
 			<Divider />
 			<MoreThan />
 			<WhyChoose />
