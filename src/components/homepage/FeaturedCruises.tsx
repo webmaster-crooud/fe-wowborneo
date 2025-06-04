@@ -12,26 +12,30 @@ import { CarouselItem } from "../ui/carousel";
 import { HomePageResponse } from "@/types/home";
 import { SafeHTML } from "../SafeHTML";
 
-// const sliderImages = ["/home/featured.webp", "/images/wildlife/bekantan.png", "/images/wildlife/deer.png", "/images/wildlife/komodo.png"];
+const cruise = ["/home/featured.webp", "/images/wildlife/bekantan.png", "/images/wildlife/deer.png", "/images/wildlife/komodo.png"];
 
-export default function FeaturedCruises({ cruise }: { cruise: HomePageResponse["cruise"] }) {
+// export default function FeaturedCruises({ cruise }: { cruise: HomePageResponse["cruise"] }) {
+export default function FeaturedCruises() {
 	const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
 	const data = [
 		{
-			head: "Exclusive Access",
-			desc: "Visit Camp Leakey, a renowned orangutan rehabilitation center, accessible only through special partnerships.",
-			img: "/home/exclusive.webp",
+			title: "Exclusive Access",
+			description: "Visit Camp Leakey, a renowned orangutan rehabilitation center, accessible only through special partnerships.",
+			cover: "/home/exclusive.webp",
+			duration: 5,
 		},
 		{
-			head: "Local Guideline",
-			desc: "Visit Camp Leakey, a renowned orangutan rehabilitation center, accessible only through special partnerships.",
-			img: "/home/local.webp",
+			title: "Local Guideline",
+			description: "Visit Camp Leakey, a renowned orangutan rehabilitation center, accessible only through special partnerships.",
+			cover: "/home/local.webp",
+			duration: 3,
 		},
 		{
-			head: "Sustainable Statement",
-			desc: "Visit Camp Leakey, a renowned orangutan rehabilitation center, accessible only through special partnerships.",
-			img: "/home/sustainable.webp",
+			title: "Sustainable Statement",
+			description: "Visit Camp Leakey, a renowned orangutan rehabilitation center, accessible only through special partnerships.",
+			cover: "/home/sustainable.webp",
+			duration: 4,
 		},
 	];
 	return (
@@ -43,7 +47,7 @@ export default function FeaturedCruises({ cruise }: { cruise: HomePageResponse["
 			</Container>
 			{/* Section 2 */}
 			<ImageSlider key={"ImageFeatureCruise"}>
-				{cruise.map((c, index) => (
+				{data.map((c, index) => (
 					<CarouselItem key={index}>
 						<Container className={cx("w-full relative space-y-10 px-4 py-2 sm:px-8 md:px-0 md:space-y-0 md:flex md:flex-col md:items-center md:justify-center")}>
 							<div className={cx("w-full h-full flex flex-col gap-24-d justify-center items-center md:absolute md:justify-center md:z-20 md:text-white md:text-center md:px-32 md:h-fit")}>

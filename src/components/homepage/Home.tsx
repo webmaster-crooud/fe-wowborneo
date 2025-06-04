@@ -13,7 +13,8 @@ import Resource from "./Resource";
 import Testimonial from "./Testimonial";
 import Experience from "./Experience";
 import { HomePageResponse } from "@/types/home";
-export default function Home({ data }: { data: HomePageResponse }) {
+// export default function Home({ data }: { data: HomePageResponse }) {
+export default function Home() {
 	const state = toggleNavbar();
 
 	const navbarColors = [0, 1];
@@ -33,9 +34,11 @@ export default function Home({ data }: { data: HomePageResponse }) {
 			<Hero />
 			<Introduction />
 			<Divider />
-			<FeaturedCruises cruise={data.cruise} />
+			<FeaturedCruises />
+			{/* <FeaturedCruises cruise={data.cruise} /> */}
 			<Divider />
-			<BoatsOverview boat={data.boat} />
+			<BoatsOverview />
+			{/* <BoatsOverview boat={data.boat} /> */}
 			<Experience />
 			<Resource />
 			<Divider />

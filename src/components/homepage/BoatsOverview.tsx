@@ -9,30 +9,35 @@ import { HomePageResponse } from "@/types/home";
 import { SafeHTML } from "../SafeHTML";
 
 interface DataOverview {
-	image: string;
-	title: string;
+	cover: string;
+	name: string;
+	slug: string;
 	description: string;
 }
 
-const overview: DataOverview[] = [
+const boat: DataOverview[] = [
 	{
-		title: "Rahai'i Pangun",
+		name: "Rahai'i Pangun",
+		slug: "rahaii-pangun",
 		description: "",
-		image: "/home/boat_overview_rahai.webp",
+		cover: "/home/boat_overview_rahai.webp",
 	},
 	{
-		title: "Kumai",
+		name: "Kumai",
+		slug: "kumai",
 		description: "",
-		image: "/home/boat_overview_kumai.webp",
+		cover: "/home/boat_overview_kumai.webp",
 	},
 	{
-		title: "Spirit Of Kalimantan",
+		name: "Spirit Of Kalimantan",
+		slug: "spirit-of-kalimantan",
 		description: "",
-		image: "/home/boat_overview_spirit_of_kalimantan.webp",
+		cover: "/home/boat_overview_spirit_of_kalimantan.webp",
 	},
 ];
 
-export default function BoatsOverview({ boat }: { boat: HomePageResponse["boat"] }) {
+export default function BoatsOverview() {
+	// export default function BoatsOverview({ boat }: { boat: HomePageResponse["boat"] }) {
 	return (
 		<Container className={cx("w-full h-full space-y-12 md:px-0")}>
 			<div className={cx("text-center grid grid-cols-1 lg:grid-cols-2 gap-4 items-end justify-between relative sm:px-8 md:px-16")}>
